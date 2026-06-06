@@ -5,49 +5,49 @@ import { ArrowRight, Calendar, Tag, Search, BookOpen } from 'lucide-react';
 const articles = [
   {
     id: 1,
-    slug: 'byd-seal-review-lengkap',
+    slug: 'wuling-eksion-review-lengkap',
     category: 'Review',
     categoryColor: '#0066cc',
     date: 'Mei 10, 2025',
-    title: 'Review Lengkap BYD Seal 2025: Sedan Listrik Premium Terbaik di Kelasnya',
+    title: 'Review Lengkap Wuling Eksion EV 2025: SUV Listrik Premium Terbaik di Kelasnya',
     excerpt:
-      'BYD Seal hadir dengan desain aerodinamis memukau, teknologi e-platform 3.0, dan performa setara mobil sport. Kami menguji langsung di jalanan Serpong hingga Puncak. Ini hasilnya.',
-    image: './images/byd_seal.png',
+      'Wuling Eksion EV hadir dengan desain sporty aerodinamis yang memukau, teknologi motor listrik bertenaga tinggi, dan performa yang mengagumkan. Kami menguji langsung di jalanan BSD hingga Puncak. Ini hasilnya.',
+    image: './images/wuling/Eksion-White.png',
     content: [
-      { type: 'paragraph', text: "BYD Seal secara resmi menjadi salah satu sedan listrik paling populer di Indonesia sejak pertama kali diluncurkan. Menawarkan perpaduan estetika 'Ocean Aesthetics' yang sporty dan teknologi baterai Blade legendaris dari BYD, mobil ini mampu menarik perhatian para penggemar otomotif tanah air." },
+      { type: 'paragraph', text: "Wuling Eksion EV secara resmi menjadi salah satu SUV listrik paling menarik di Indonesia sejak pertama kali diluncurkan. Menawarkan perpaduan desain aerodinamis sporty yang memukau dan teknologi motor listrik bertenaga tinggi, mobil ini mampu menarik perhatian para penggemar otomotif tanah air." },
       { type: 'heading', text: 'Performa dan Pengalaman Berkendara' },
-      { type: 'paragraph', text: 'Kami menguji langsung varian Performance AWD di wilayah BSD City, Serpong Raya. Mengendarai sedan bertenaga 530 HP dengan akselerasi yang instan memberikan sensasi berkendara luar biasa layaknya mobil sport murni.' },
+      { type: 'paragraph', text: 'Kami menguji langsung varian Eksion EV EX di wilayah BSD City, Serpong Raya. Mengendarai SUV bertenaga 160 kW dengan akselerasi yang instan memberikan sensasi berkendara luar biasa yang menyenangkan dan meyakinkan.' },
       { type: 'list', items: [
-        'Tenaga Maksimal: 530 HP dengan motor listrik ganda (AWD)',
-        'Akselerasi 0–100 km/jam: Hanya dalam 3,8 detik saja',
-        'Jarak Tempuh Maksimal: Hingga 580 km dalam sekali pengisian daya penuh (NEDC)',
-        'Handling & Stabilitas: Sangat kokoh dengan rancangan sasis e-platform 3.0 terbaru'
+        'Tenaga Maksimal: 160 kW (217 HP) dengan motor listrik PMSM',
+        'Akselerasi 0–100 km/jam: Dalam 6.5 detik yang mengesankan',
+        'Jarak Tempuh Maksimal: Hingga 475 km dalam sekali pengisian daya penuh',
+        'Handling & Stabilitas: Sangat kokoh dengan sasis modern berteknologi terkini'
       ] },
       { type: 'heading', text: 'Kenyamanan dan Fitur Interior' },
-      { type: 'paragraph', text: 'Ditambah dengan kabin yang sangat kedap suara, panoramic glass roof yang lapang, audio mewah premium dari Dynaudio 12-speaker, serta jok berlapis kulit premium, BYD Seal adalah pilihan terbaik bagi Anda yang mencari kombinasi kemewahan dan kecepatan.' }
+      { type: 'paragraph', text: 'Ditambah dengan kabin yang sangat kedap suara, panoramic sunroof yang lapang, audio premium berkualitas tinggi, serta jok berlapis material premium, Wuling Eksion EV adalah pilihan terbaik bagi Anda yang mencari kombinasi kemewahan dan performa.' }
     ]
   },
   {
     id: 2,
-    slug: 'byd-atto3-vs-hyundai-ioniq5',
+    slug: 'wuling-darion-vs-honda-odyssey',
     category: 'Comparison',
     categoryColor: '#7c3aed',
     date: 'April 28, 2025',
-    title: 'BYD Atto 3 vs Hyundai Ioniq 5: Mana yang Lebih Worth It untuk Keluarga Indonesia?',
+    title: 'Wuling Darion EV vs Honda Odyssey: MPV Listrik vs Hybrid, Mana yang Lebih Worth It?',
     excerpt:
-      'Dua SUV listrik terpopuler di Indonesia head-to-head. Kami membandingkan harga, fitur, kenyamanan, dan biaya operasional secara mendalam untuk membantu Anda memilih.',
-    image: './images/byd_atto.png',
+      'Dua MPV terpopuler di Indonesia head-to-head. Kami membandingkan harga, fitur, kenyamanan, dan biaya operasional secara mendalam untuk membantu Anda memilih MPV keluarga terbaik.',
+    image: './images/wuling/Darion_White.png',
     content: [
-      { type: 'paragraph', text: "Pasar SUV listrik di Indonesia semakin memanas dengan kehadiran BYD Atto 3 dan Hyundai Ioniq 5. Keduanya menawarkan kenyamanan berkendara, performa motor listrik yang instan, dan kabin modern yang sangat ramah untuk perjalanan keluarga." },
+      { type: 'paragraph', text: "Pasar MPV keluarga di Indonesia semakin beragam dengan kehadiran Wuling Darion EV yang menantang kemapanan kendaraan berbahan bakar konvensional. Keduanya menawarkan kenyamanan berkendara, kabin lega, dan berbagai fitur canggih untuk keluarga." },
       { type: 'heading', text: 'Perbandingan Harga & Spesifikasi Utama' },
       { type: 'list', items: [
-        'Baterai BYD Atto 3: 60.48 kWh Blade Battery dengan jangkauan 480 km (NEDC)',
-        'Baterai Hyundai Ioniq 5: 72.6 kWh dengan jangkauan 481 km (WLTP)',
+        'Baterai Wuling Darion EV: 68.8 kWh dengan jangkauan 500 km sekali pengisian penuh',
+        'Efisiensi Operasional: Biaya per km Darion EV jauh lebih rendah dibanding BBM',
         'Fitur Keamanan: Keduanya sudah dilengkapi fitur ADAS canggih lengkap',
-        'Tema Desain: Atto 3 bertema sporty-music yang dinamis, Ioniq 5 mengusung konsep retro-pixel'
+        'Kapasitas: Keduanya hadir dengan konfigurasi 7-seater yang lapang dan fleksibel'
       ] },
       { type: 'heading', text: 'Mana yang Lebih Layak Dipilih?' },
-      { type: 'paragraph', text: 'BYD Atto 3 menawarkan kenyamanan berkendara, durabilitas Blade Battery yang legendaris, serta nilai value-for-money yang sangat luar biasa untuk keluarga Indonesia yang ingin bertransisi ke kendaraan masa depan.' }
+      { type: 'paragraph', text: 'Wuling Darion EV menawarkan biaya operasional yang jauh lebih rendah, teknologi listrik modern, serta nilai value-for-money yang luar biasa untuk keluarga Indonesia yang ingin beralih ke kendaraan masa depan.' }
     ]
   },
   {
@@ -56,10 +56,10 @@ const articles = [
     category: 'Tips',
     categoryColor: '#059669',
     date: 'April 15, 2025',
-    title: '7 Tips Merawat Baterai Mobil Listrik agar Tetap Awet dan Optimal',
+    title: '7 Tips Merawat Baterai Mobil Listrik Wuling agar Tetap Awet dan Optimal',
     excerpt:
-      'Baterai adalah jantung mobil listrik. Dengan perawatan yang tepat, usia baterai BYD Blade bisa mencapai lebih dari 10 tahun. Simak panduan lengkapnya di sini.',
-    image: './images/byd_sealion.png',
+      'Baterai adalah jantung mobil listrik. Dengan perawatan yang tepat, usia baterai kendaraan listrik Wuling bisa mencapai lebih dari 10 tahun. Simak panduan lengkapnya di sini.',
+    image: './images/wuling/NewAIREV-Galaxy_Blue.png',
     content: [
       { type: 'paragraph', text: "Baterai adalah jantung kendaraan listrik (EV). Merawat baterai dengan benar tidak hanya menjaga jangkauan jarak tempuh tetap optimal, tetapi juga memperpanjang masa pakai baterai hingga belasan tahun." },
       { type: 'heading', text: 'Tips Menjaga Kualitas Sel Baterai' },
@@ -70,43 +70,43 @@ const articles = [
         'Parkir di Tempat Teduh: Suhu ekstrim dapat mempengaruhi efisiensi pengisian daya dan umur baterai.',
         'Lakukan Pembaruan Software (OTA): Selalu update sistem manajemen baterai mobil Anda.'
       ] },
-      { type: 'paragraph', text: 'Dengan teknologi Blade Battery BYD yang terkenal sangat aman dan tahan terhadap siklus ekstrem, melakukan perawatan sederhana di atas akan menjamin performa penyimpanan daya tetap prima selamanya.' }
+      { type: 'paragraph', text: 'Dengan teknologi baterai Wuling yang canggih dan terpercaya, melakukan perawatan sederhana di atas akan menjamin performa penyimpanan daya tetap prima selamanya.' }
     ]
   },
   {
     id: 4,
-    slug: 'byd-sealion-7-test-drive',
+    slug: 'wuling-eksion-phev-test-drive',
     category: 'Test Drive',
     categoryColor: '#dc2626',
     date: 'April 5, 2025',
-    title: 'Test Drive BYD Sealion 7 AWD: Akselerasi 0–100 km/h dalam 4,5 Detik yang Mengejutkan',
+    title: 'Test Drive Wuling Eksion PHEV: Akselerasi 0–100 km/h dalam 5,5 Detik yang Mengejutkan',
     excerpt:
-      'Kami mencoba varian Performance AWD BYD Sealion 7 di sirkuit dan jalan tol. Torsi 690 Nm terasa nyata saat pedal gas ditekan penuh. Ini pengalaman berkendara paling mendebarkan kami.',
-    image: './images/byd_sealion.png',
+      'Kami mencoba varian Eksion PHEV EX di jalan tol dan perkotaan. Torsi 460 Nm terasa nyata saat pedal gas ditekan penuh. Ini pengalaman berkendara paling mendebarkan dari Wuling.',
+    image: './images/wuling/Eksion-Archipelago_Blue.png',
     content: [
-      { type: 'paragraph', text: "BYD Sealion 7 AWD Performance mendefinisikan ulang standar SUV listrik berperforma tinggi. Kami berkesempatan mengujinya langsung di jalan bebas hambatan Tangerang-Merak untuk merasakan semburan torsi instan yang mengejutkan." },
+      { type: 'paragraph', text: "Wuling Eksion PHEV EX mendefinisikan ulang standar SUV berperforma tinggi. Kami berkesempatan mengujinya langsung di jalan bebas hambatan Tangerang-Merak untuk merasakan semburan torsi instan yang mengejutkan." },
       { type: 'heading', text: 'Hasil Uji Performa Lapangan' },
       { type: 'list', items: [
-        'Torsi Instan: Semburan 690 Nm langsung terasa begitu pedal akselerator diinjak',
-        'Akselerasi 0-100 km/jam: Terbukti tembus dalam waktu 4.5 detik saja',
-        'Sasis & Suspensi: Menggunakan e-platform 3.0 terpadu dengan suspensi adaptif DiSus-C',
+        'Torsi Instan: Semburan 460 Nm langsung terasa begitu pedal akselerator diinjak',
+        'Akselerasi 0-100 km/jam: Terbukti tembus dalam waktu 5.5 detik yang mengesankan',
+        'Moda Berkendara: Tersedia mode EV, Hybrid, dan Sport untuk berbagai kebutuhan',
         'Stabilitas Tikungan: Body roll sangat minim dengan grip AWD yang mencengkeram sempurna'
       ] },
-      { type: 'paragraph', text: 'Secara keseluruhan, SUV listrik ini menghadirkan perpaduan sempurna antara kenyamanan berkendara premium kelas atas dan performa mesin buas yang instan.' }
+      { type: 'paragraph', text: 'Secara keseluruhan, SUV PHEV ini menghadirkan perpaduan sempurna antara kenyamanan berkendara premium kelas atas dan performa mesin yang instan serta jangkauan tanpa batas.' }
     ]
   },
   {
     id: 5,
-    slug: 'panduan-kredit-mobil-listrik-2025',
+    slug: 'panduan-kredit-mobil-wuling-2025',
     category: 'Panduan',
     categoryColor: '#d97706',
     date: 'Maret 22, 2025',
-    title: 'Panduan Lengkap Kredit Mobil Listrik BYD 2025: Syarat, Cicilan, dan Simulasi Harga',
+    title: 'Panduan Lengkap Kredit Mobil Wuling 2025: Syarat, Cicilan, dan Simulasi Harga',
     excerpt:
-      'Beli mobil listrik BYD secara kredit kini semakin mudah. Kami merangkum semua pilihan pembiayaan, DP minimal, tenor, dan bunga terbaik yang tersedia di dealer resmi.',
-    image: './images/byd_atto.png',
+      'Beli mobil Wuling secara kredit kini semakin mudah. Kami merangkum semua pilihan pembiayaan, DP minimal, tenor, dan bunga terbaik yang tersedia di dealer resmi Wuling Mimosa BSD.',
+    image: './images/wuling/Alvez-Pristine_White.png',
     content: [
-      { type: 'paragraph', text: "Memiliki kendaraan listrik impian kini semakin mudah dengan berbagai program pembiayaan yang fleksibel. Dealer resmi BYD BIPO Serpong bekerja sama dengan berbagai bank dan leasing terkemuka menyediakan paket DP ringan dan bunga kompetitif." },
+      { type: 'paragraph', text: "Memiliki kendaraan impian kini semakin mudah dengan berbagai program pembiayaan yang fleksibel. Dealer resmi Wuling Mimosa BSD bekerja sama dengan berbagai bank dan leasing terkemuka menyediakan paket DP ringan dan bunga kompetitif." },
       { type: 'heading', text: 'Syarat Dokumen Pengajuan Kredit' },
       { type: 'list', items: [
         'Fotokopi KTP Pemohon (Suami & Istri jika sudah menikah)',
@@ -120,24 +120,24 @@ const articles = [
   },
   {
     id: 6,
-    slug: 'byd-m6-untuk-keluarga',
+    slug: 'wuling-darion-ev-untuk-keluarga',
     category: 'Review',
     categoryColor: '#0066cc',
     date: 'Maret 10, 2025',
-    title: 'BYD M6: MPV Listrik 7-Seater Terbaik untuk Keluarga Besar di Indonesia',
+    title: 'Wuling Darion EV: MPV Listrik 7-Seater Terbaik untuk Keluarga Besar di Indonesia',
     excerpt:
-      'BYD M6 menawarkan kabin lega 7 penumpang, pintu geser elektrik, panoramic sunroof, dan jangkauan hingga 530 km. Apakah ini MPV listrik impian keluarga Indonesia?',
-    image: './images/byd_seal.png',
+      'Wuling Darion EV menawarkan kabin lega 7 penumpang, desain premium, dan jangkauan hingga 500 km. Apakah ini MPV listrik impian keluarga Indonesia?',
+    image: './images/wuling/Darion-Haze_Grey.png',
     content: [
-      { type: 'paragraph', text: "BYD M6 hadir sebagai jawaban atas tingginya permintaan mobil keluarga 7-seater di Indonesia yang ramah lingkungan. MPV listrik medium ini menawarkan ruang kabin yang lapang, kepraktisan harian, dan jaminan keamanan tingkat tinggi bagi keluarga besar." },
-      { type: 'heading', text: 'Keunggulan Utama BYD M6' },
+      { type: 'paragraph', text: "Wuling Darion EV hadir sebagai jawaban atas tingginya permintaan mobil keluarga 7-seater di Indonesia yang ramah lingkungan. MPV listrik premium ini menawarkan ruang kabin yang lapang, kepraktisan harian, dan jaminan keamanan tingkat tinggi bagi keluarga besar." },
+      { type: 'heading', text: 'Keunggulan Utama Wuling Darion EV' },
       { type: 'list', items: [
         'Kapasitas 7 Penumpang Nyata: Kursi baris kedua dan ketiga sangat lapang dengan AC hembusan merata',
         'Fleksibilitas Ruang: Kursi baris belakang bisa dilipat rata dengan lantai untuk muatan bagasi ekstra luas',
-        'Jarak Tempuh Panjang: Dilengkapi baterai andal dengan jangkauan tempuh mencapai 530 km sekali cas penuh',
+        'Jarak Tempuh Panjang: Dilengkapi baterai 68.8 kWh dengan jangkauan tempuh mencapai 500 km sekali cas penuh',
         'Biaya Operasional Rendah: Penghematan biaya harian hingga 70% dibandingkan mobil bermesin bensin'
       ] },
-      { type: 'paragraph', text: 'BYD M6 merupakan pilihan nomor satu bagi keluarga modern Indonesia yang mendambakan mobil ramah lingkungan dengan kemewahan dan fungsi maksimal.' }
+      { type: 'paragraph', text: 'Wuling Darion EV merupakan pilihan nomor satu bagi keluarga modern Indonesia yang mendambakan mobil ramah lingkungan dengan kemewahan dan fungsi maksimal.' }
     ]
   },
   {
@@ -146,15 +146,15 @@ const articles = [
     category: 'Tips',
     categoryColor: '#059669',
     date: 'Februari 28, 2025',
-    title: 'Peta Lengkap SPKLU & Charging Station BYD di Jabodetabek 2025',
+    title: 'Peta Lengkap SPKLU & Charging Station Wuling di Jabodetabek 2025',
     excerpt:
-      'Sudah tahu semua lokasi pengisian daya untuk mobil listrik BYD Anda di area Jabodetabek? Kami merangkum 50+ titik SPKLU terdekat lengkap dengan waktu pengisian.',
-    image: './images/byd_sealion.png',
+      'Sudah tahu semua lokasi pengisian daya untuk mobil listrik Wuling Anda di area Jabodetabek? Kami merangkum 50+ titik SPKLU terdekat lengkap dengan waktu pengisian.',
+    image: './images/wuling/NewCLOUDEV-Aurora_Silver.png',
     content: [
-      { type: 'paragraph', text: "Jaringan Stasiun Pengisian Kendaraan Listrik Umum (SPKLU) di wilayah Jabodetabek tumbuh sangat pesat pada tahun 2025. Sebagai pemilik mobil listrik BYD, Anda kini tidak perlu lagi merasa khawatir kehabisan daya saat berkendara jauh." },
+      { type: 'paragraph', text: "Jaringan Stasiun Pengisian Kendaraan Listrik Umum (SPKLU) di wilayah Jabodetabek tumbuh sangat pesat pada tahun 2025. Sebagai pemilik mobil listrik Wuling, Anda kini tidak perlu lagi merasa khawatir kehabisan daya saat berkendara jauh." },
       { type: 'heading', text: 'Lokasi Pengisian Daya Terfavorit' },
       { type: 'list', items: [
-        'BYD BIPO Serpong: Menyediakan fasilitas DC Ultra-Fast Charging gratis khusus bagi konsumen setia',
+        'Wuling Mimosa BSD: Menyediakan fasilitas DC Fast Charging gratis khusus bagi konsumen setia',
         'SPKLU PLN Mobile: Tersebar di puluhan rest area jalan tol dan kantor pemerintahan di Jabodetabek',
         'Charging Station Mall: Tersedia di mal terkemuka seperti AEON Mall, Summarecon Mall Serpong, dan Grand Indonesia',
         'Jaringan Charging Station Swasta: Akses mudah menggunakan aplikasi seperti Charge.in atau Casion'
@@ -164,24 +164,24 @@ const articles = [
   },
   {
     id: 8,
-    slug: 'byd-dolphin-city-car-terbaik',
+    slug: 'wuling-air-ev-city-car-terbaik',
     category: 'Review',
     categoryColor: '#0066cc',
     date: 'Februari 14, 2025',
-    title: 'BYD Dolphin: City Car Listrik Paling Fun dan Efisien untuk Anak Muda',
+    title: 'Wuling New Air EV: City Car Listrik Paling Fun dan Efisien untuk Anak Muda',
     excerpt:
-      'Desain Ocean Aesthetics yang playful, kabin modern, dan harga terjangkau membuat BYD Dolphin menjadi pilihan utama generasi muda yang ingin beralih ke kendaraan listrik.',
-    image: './images/byd_seal.png',
+      'Desain kompak futuristik yang playful, kabin modern, dan harga terjangkau membuat Wuling New Air EV menjadi pilihan utama generasi muda yang ingin beralih ke kendaraan listrik.',
+    image: './images/wuling/NewAIREV-Lemon_Yellow.png',
     content: [
-      { type: 'paragraph', text: "BYD Dolphin menjadi pilihan utama bagi anak muda perkotaan yang mencari mobil harian yang stylish, lincah, dan super hemat energi. Desain luarnya terinspirasi dari keindahan laut (Ocean Aesthetics) yang terlihat dinamis dan modern." },
+      { type: 'paragraph', text: "Wuling New Air EV menjadi pilihan utama bagi anak muda perkotaan yang mencari mobil harian yang stylish, lincah, dan super hemat energi. Desain luarnya yang kompak dan futuristik terlihat sangat dinamis dan modern di jalanan kota." },
       { type: 'heading', text: 'Fitur Unggulan Kekinian' },
       { type: 'list', items: [
-        'Layar Sentuh 12,8 Inci yang bisa diputar (Rotating Screen) vertikal/horizontal khas BYD',
-        'Sistem hiburan premium dengan Apple CarPlay & Android Auto nirkabel instan',
-        'Panoramic glass roof lapang yang menambah kemewahan kabin',
+        'Layar sentuh 10.25 inci yang intuitif dengan konektivitas smartphone lengkap',
+        'Sistem hiburan dengan Apple CarPlay & Android Auto wireless instan',
+        'Konsumsi energi super efisien untuk perjalanan perkotaan sehari-hari',
         'Bebas aturan Ganjil-Genap di seluruh ruas jalan protokol Jakarta'
       ] },
-      { type: 'paragraph', text: 'Dengan jangkauan mencapai 410-490 km dalam sekali pengisian baterai penuh, BYD Dolphin siap menemani mobilitas harian Anda dengan kenyamanan maksimal dan efisiensi energi yang luar biasa.' }
+      { type: 'paragraph', text: 'Dengan jangkauan hingga 300 km dalam sekali pengisian baterai penuh, Wuling New Air EV siap menemani mobilitas harian Anda dengan kenyamanan dan efisiensi energi yang luar biasa.' }
     ]
   },
 ];
@@ -198,7 +198,7 @@ function ArticleCard({ article, featured = false, onSelect }) {
     >
       {/* Thumbnail */}
       <div className="art-card-img-wrap">
-        <img src={article.image} alt={article.title} className="art-card-img" />
+        <img src={article.image} alt={article.title} className="art-card-img" loading="lazy" width="600" height="400" />
         <div className="art-card-img-overlay" />
       </div>
 
@@ -400,10 +400,10 @@ export default function ArticlesPage() {
               Tertarik Berkonsultasi Lebih Lanjut?
             </h3>
             <p style={{ color: '#6b7280', fontSize: '0.95rem', marginBottom: '1.5rem', maxWidth: '500px', margin: '0 auto 1.5rem' }}>
-              Hubungi Rafi Brand Consultan (Sales Dealer Resmi BYD BIPO Serpong) untuk simulasi cicilan, harga promo terbaru, dan jadwal test drive gratis.
+              Hubungi Tim Sales Wuling Mimosa BSD untuk simulasi cicilan, harga promo terbaru, dan jadwal test drive gratis.
             </p>
             <a
-              href={`https://wa.me/6288214786250?text=Halo%20saya%20tertarik%20dengan%20artikel%20"${encodeURIComponent(selectedArticle.title)}"%20dan%20ingin%20tanya-tanya%20seputar%20BYD`}
+              href={`https://wa.me/6288214786250?text=Halo%20saya%20tertarik%20dengan%20artikel%20"${encodeURIComponent(selectedArticle.title)}"%20dan%20ingin%20tanya-tanya%20seputar%20Wuling`}
               target="_blank"
               rel="noreferrer"
               className="btn-primary"
@@ -428,10 +428,10 @@ export default function ArticlesPage() {
           <span className="art-hero-badge">
             <BookOpen size={13} /> Blog & Artikel
           </span>
-          <h1 className="art-hero-title">Berita & Artikel<br />Seputar BYD</h1>
+          <h1 className="art-hero-title">Berita & Artikel<br />Seputar Wuling</h1>
           <p className="art-hero-sub">
-            Tips berkendara, review kendaraan listrik, panduan kredit, dan informasi terbaru
-            seputar BYD Indonesia — semuanya tersedia di sini.
+            Tips berkendara, review kendaraan listrik Wuling, panduan kredit, dan informasi terbaru
+            seputar Wuling Indonesia — semuanya tersedia di sini.
           </p>
 
           {/* Search */}
@@ -504,13 +504,13 @@ export default function ArticlesPage() {
       <div className="art-cta-section">
         <div className="container art-cta-inner">
           <div>
-            <h2 className="art-cta-title">Ada Pertanyaan Seputar BYD?</h2>
+            <h2 className="art-cta-title">Ada Pertanyaan Seputar Wuling?</h2>
             <p className="art-cta-sub">
-              Hubungi tim sales kami untuk konsultasi gratis seputar mobil listrik BYD, kredit, dan test drive.
+              Hubungi tim sales kami untuk konsultasi gratis seputar mobil Wuling, kredit, dan test drive.
             </p>
           </div>
           <a
-            href="https://wa.me/6288214786250?text=Halo%2C%20saya%20ingin%20konsultasi%20tentang%20BYD"
+            href="https://wa.me/6288214786250?text=Halo%2C%20saya%20ingin%20konsultasi%20tentang%20Wuling"
             target="_blank"
             rel="noreferrer"
             className="btn-primary"

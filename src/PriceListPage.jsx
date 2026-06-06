@@ -1,236 +1,34 @@
 import React, { useState } from 'react';
 import { Phone, ChevronRight, Zap, Gauge, Battery, Timer, Tag } from 'lucide-react';
+import { carData } from './carData';
 
-// ── Accurate data sourced from katalog PDFs & reference site ──────────────────
-const priceListData = [
-  {
-    id: 'byd-seal',
-    name: 'BYD Seal',
-    category: 'Sedan',
-    image: './images/BYD/BYD-Seal-AURORA WHITE.png',
-    variants: [
-      {
-        label: 'Premium',
-        sub: 'Include Wall Charging',
-        price: 'Rp639.000.000',
-        priceNum: 639000000,
-        specs: { torque: '360 N.m', power: '308 HP', range: '650 km', battery: '82.56 kWh', acceleration: '5.9 dtk' },
-      },
-      {
-        label: 'Premium',
-        sub: 'Exclude Wall Charging',
-        price: 'Rp630.500.000',
-        priceNum: 630500000,
-        specs: { torque: '360 N.m', power: '308 HP', range: '650 km', battery: '82.56 kWh', acceleration: '5.9 dtk' },
-      },
-      {
-        label: 'Performance',
-        sub: 'Include Wall Charging',
-        price: 'Rp750.000.000',
-        priceNum: 750000000,
-        specs: { torque: '670 N.m', power: '523 HP', range: '580 km', battery: '82.56 kWh', acceleration: '3.8 dtk' },
-      },
-      {
-        label: 'Performance',
-        sub: 'Exclude Wall Charging',
-        price: 'Rp741.500.000',
-        priceNum: 741500000,
-        specs: { torque: '670 N.m', power: '523 HP', range: '580 km', battery: '82.56 kWh', acceleration: '3.8 dtk' },
-      },
-    ],
-  },
-  {
-    id: 'byd-atto-3',
-    name: 'BYD Atto 3',
-    category: 'SUV',
-    image: './images/BYD/BYD-Atto3-Surf Blue.png',
-    variants: [
-      {
-        label: 'Advance+',
-        sub: 'NEW',
-        price: 'Rp415.000.000',
-        priceNum: 415000000,
-        specs: { torque: '310 N.m', power: '201 HP', range: '410 km', battery: '49.92 kWh', acceleration: '7.9 dtk' },
-      }
-    ],
-  },
-  {
-    id: 'byd-dolphin',
-    name: 'BYD Dolphin',
-    category: 'Hatchback',
-    image: './images/BYD/BYD-Dolphin-Surf Blue.png',
-    variants: [
-      {
-        label: 'Premium',
-        sub: 'Include Wall Charging',
-        price: 'Rp429.000.000',
-        priceNum: 429000000,
-        specs: { torque: '310 N.m', power: '201 HP', range: '490 km', battery: '60.48 kWh', acceleration: '7.0 dtk' },
-      },
-      {
-        label: 'Premium',
-        sub: 'Exclude Wall Charging',
-        price: 'Rp420.500.000',
-        priceNum: 420500000,
-        specs: { torque: '310 N.m', power: '201 HP', range: '490 km', battery: '60.48 kWh', acceleration: '7.0 dtk' },
-      },
-      {
-        label: 'Dynamic',
-        sub: 'Include Wall Charging',
-        price: 'Rp369.000.000',
-        priceNum: 369000000,
-        specs: { torque: '180 N.m', power: '94 HP', range: '410 km', battery: '44.9 kWh', acceleration: '12.3 dtk' },
-      },
-      {
-        label: 'Dynamic',
-        sub: 'Exclude Wall Charging',
-        price: 'Rp360.500.000',
-        priceNum: 360500000,
-        specs: { torque: '180 N.m', power: '94 HP', range: '410 km', battery: '44.9 kWh', acceleration: '12.3 dtk' },
-      },
-    ],
-  },
-  {
-    id: 'byd-m6',
-    name: 'BYD M6',
-    category: 'MPV',
-    image: './images/BYD/BYD-M6-Crystal White.png',
-    variants: [
-      {
-        label: 'Superior',
-        sub: 'Capt Seat',
-        price: 'Rp433.000.000',
-        priceNum: 433000000,
-        specs: { torque: '310 N.m', power: '201 HP', range: '530 km', battery: '71.8 kWh', acceleration: '8.6 dtk' },
-      },
-      {
-        label: 'Superior',
-        sub: '7 Seater',
-        price: 'Rp423.000.000',
-        priceNum: 423000000,
-        specs: { torque: '310 N.m', power: '201 HP', range: '530 km', battery: '71.8 kWh', acceleration: '8.6 dtk' },
-      },
-      {
-        label: 'Standar',
-        sub: '7 Seater',
-        price: 'Rp383.000.000',
-        priceNum: 383000000,
-        specs: { torque: '310 N.m', power: '161 HP', range: '420 km', battery: '55.4 kWh', acceleration: '10.1 dtk' },
-      },
-    ],
-  },
-  {
-    id: 'byd-sealion-7',
-    name: 'BYD Sealion 7',
-    category: 'SUV',
-    image: './images/BYD/BYD-Sealion7-AURORA WHITE.png',
-    variants: [
-      {
-        label: 'Premium',
-        sub: 'Include Wall Charging',
-        price: 'Rp629.000.000',
-        priceNum: 629000000,
-        specs: { torque: '390 N.m', power: '308 HP', range: '567 km', battery: '82.56 kWh', acceleration: '5.9 dtk' },
-      },
-      {
-        label: 'Premium',
-        sub: 'Exclude Wall Charging',
-        price: 'Rp620.500.000',
-        priceNum: 620500000,
-        specs: { torque: '390 N.m', power: '308 HP', range: '567 km', battery: '82.56 kWh', acceleration: '5.9 dtk' },
-      },
-      {
-        label: 'Performance',
-        sub: 'Include Wall Charging',
-        price: 'Rp719.000.000',
-        priceNum: 719000000,
-        specs: { torque: '690 N.m', power: '523 HP', range: '542 km', battery: '82.56 kWh', acceleration: '4.5 dtk' },
-      },
-      {
-        label: 'Performance',
-        sub: 'Exclude Wall Charging',
-        price: 'Rp710.500.000',
-        priceNum: 710500000,
-        specs: { torque: '690 N.m', power: '523 HP', range: '542 km', battery: '82.56 kWh', acceleration: '4.5 dtk' },
-      },
-    ],
-  },
-  {
-    id: 'byd-atto-1',
-    name: 'BYD Atto 1',
-    category: 'Hatchback',
-    image: './images/BYD/BYD-Atto1-Sprout Green.png',
-    variants: [
-      {
-        label: 'Premium',
-        sub: 'Extended Range',
-        price: 'Rp245.000.000',
-        priceNum: 245000000,
-        specs: { torque: '135 N.m', power: '73 HP', range: '380 km', battery: '38.88 kWh', acceleration: '12.5 dtk' },
-      },
-      {
-        label: 'Dynamic',
-        sub: 'Standard Range',
-        price: 'Rp205.000.000',
-        priceNum: 205000000,
-        specs: { torque: '135 N.m', power: '73 HP', range: '300 km', battery: '30.08 kWh', acceleration: '12.5 dtk' },
-      },
-      {
-        label: 'Standar',
-        sub: 'Standard Range',
-        price: 'Rp199.000.000',
-        priceNum: 199000000,
-        specs: { torque: '135 N.m', power: '73 HP', range: '300 km', battery: '30.08 kWh', acceleration: '12.5 dtk' },
-      },
-    ],
-  },
-  {
-    id: 'byd-m6-dm',
-    name: 'BYD M6 DM',
-    category: 'PHEV',
-    image: './images/BYD/BYD-M6 DM-CRYSTAL WHITE.png',
-    variants: [
-      {
-        label: 'Classic Standar',
-        sub: 'PHEV DM-i',
-        price: 'Rp310.000.000',
-        priceNum: 310000000,
-        specs: { torque: '316 N.m', power: '197 HP', range: '1.000+ km', battery: '15.87 kWh', acceleration: '7.9 dtk' },
-      },
-      {
-        label: 'Classic Dynamic',
-        sub: 'PHEV DM-i',
-        price: 'Rp330.000.000',
-        priceNum: 330000000,
-        specs: { torque: '316 N.m', power: '197 HP', range: '1.000+ km', battery: '15.87 kWh', acceleration: '7.9 dtk' },
-      },
-      {
-        label: 'Cross Advanced',
-        sub: 'PHEV DM-i',
-        price: 'Rp360.000.000',
-        priceNum: 360000000,
-        specs: { torque: '316 N.m', power: '197 HP', range: '1.000+ km', battery: '15.87 kWh', acceleration: '7.9 dtk' },
-      },
-      {
-        label: 'Cross Superior',
-        sub: '7 Seater',
-        price: 'Rp380.000.000',
-        priceNum: 380000000,
-        specs: { torque: '316 N.m', power: '197 HP', range: '1.000+ km', battery: '15.87 kWh', acceleration: '7.9 dtk' },
-      },
-      {
-        label: 'Cross Superior',
-        sub: 'Capt Seat',
-        price: 'Rp390.000.000',
-        priceNum: 390000000,
-        specs: { torque: '316 N.m', power: '197 HP', range: '1.000+ km', battery: '15.87 kWh', acceleration: '7.9 dtk' },
-      },
-    ],
-  },
-];
+const priceListData = Object.values(carData).map(car => {
+  let category = 'Hatchback';
+  if (car.id.includes('binguo') || car.id.includes('air') || car.id.includes('cloud')) {
+    category = 'EV';
+  } else if (car.id.includes('mitra')) {
+    category = 'Commercial';
+  } else if (car.id.includes('almaz') || car.id.includes('alvez')) {
+    category = 'SUV';
+  } else if (car.id.includes('eksion') || car.id.includes('darion')) {
+    category = car.id.includes('phev') ? 'PHEV' : 'EV';
+  }
 
-const CATEGORIES = ['Semua', 'Sedan', 'SUV', 'MPV', 'PHEV', 'Hatchback'];
+  return {
+    id: car.id,
+    name: car.name,
+    category: category,
+    image: car.colorImage || car.heroImage,
+    variants: car.variants.map(v => ({
+      label: v.name,
+      sub: '',
+      price: v.price,
+      specs: v.specs || { torque: '-', power: '-', range: '-', battery: '-', acceleration: '-' }
+    }))
+  };
+});
 
+const CATEGORIES = ['Semua', 'EV', 'PHEV', 'SUV', 'Commercial'];
 
 // ── Single Car Price Card ──────────────────────────────────────────────────────
 function PriceCard({ car, onViewDetail }) {
@@ -238,7 +36,7 @@ function PriceCard({ car, onViewDetail }) {
   const v = car.variants[activeVariant];
 
   const waMessage = encodeURIComponent(
-    `Halo, saya tertarik dengan ${car.name} varian ${v.label} (${v.sub}) seharga ${v.price}. Boleh minta info lebih lanjut?`
+    `Halo, saya tertarik dengan ${car.name} varian ${v.label} seharga ${v.price}. Boleh minta info lebih lanjut?`
   );
 
   return (
@@ -272,30 +70,30 @@ function PriceCard({ car, onViewDetail }) {
         {/* Price */}
         <div className="pl-price-block">
           <p className="pl-price">{v.price}</p>
-          <p className="pl-price-label">OTR Jakarta (IDR)</p>
-          <p className="pl-price-date">Harga per 4 Februari 2025</p>
+          <p className="pl-price-label">OTR Jakarta / Tangerang Selatan</p>
+          <p className="pl-price-date">Harga per Juni 2026</p>
         </div>
 
         {/* Specs grid */}
         <div className="pl-specs-grid">
           <div className="pl-spec-box">
-            <span className="pl-spec-val">{v.specs.torque}</span>
+            <span className="pl-spec-val">{v.specs.torque || '-'}</span>
             <span className="pl-spec-key">Torsi</span>
           </div>
           <div className="pl-spec-box">
-            <span className="pl-spec-val">{v.specs.power}</span>
+            <span className="pl-spec-val">{v.specs.power || '-'}</span>
             <span className="pl-spec-key">Power</span>
           </div>
           <div className="pl-spec-box">
-            <span className="pl-spec-val">{v.specs.range}</span>
+            <span className="pl-spec-val">{v.specs.range || '-'}</span>
             <span className="pl-spec-key">Range</span>
           </div>
           <div className="pl-spec-box">
-            <span className="pl-spec-val">{v.specs.battery}</span>
+            <span className="pl-spec-val">{v.specs.battery || '-'}</span>
             <span className="pl-spec-key">Baterai</span>
           </div>
           <div className="pl-spec-box">
-            <span className="pl-spec-val">{v.specs.acceleration}</span>
+            <span className="pl-spec-val">{v.specs.acceleration || '-'}</span>
             <span className="pl-spec-key">0–100 km/h</span>
           </div>
         </div>
@@ -339,11 +137,11 @@ export default function PriceListPage({ onViewDetail }) {
         <div className="pl-hero-overlay" />
         <div className="container pl-hero-content">
           <span className="pl-hero-badge">
-            <Tag size={14} /> Harga Resmi 2025
+            <Tag size={14} /> Harga Resmi 2026
           </span>
-          <h1 className="pl-hero-title">Daftar Harga<br />Mobil Listrik BYD</h1>
+          <h1 className="pl-hero-title">Daftar Harga<br />Mobil Wuling</h1>
           <p className="pl-hero-sub">
-            Harga OTR Jakarta resmi untuk seluruh model BYD. Klik varian untuk melihat spesifikasi dan harga yang berbeda.
+            Harga OTR resmi Wuling Mimosa BSD. Klik varian untuk melihat spesifikasi dan harga yang berbeda.
           </p>
         </div>
       </div>

@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap');
+/* Google Fonts are loaded via <link> in index.html with display=swap for better performance */
 
 :root {
   --bg-primary: #0a0a0a;
   --bg-secondary: #141414;
   --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
+  --text-secondary: #b8b8c8; /* Improved from #a1a1aa for WCAG AA contrast */
   --accent-color: #0066cc;
   --accent-hover: #0052a3;
   --accent-glow: rgba(0, 102, 204, 0.3);
@@ -20,15 +20,24 @@
 
 body {
   background-color: var(--bg-primary);
-  background-image: url('/images/dark_byd_bg.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Loading spinner for Suspense fallbacks */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255,255,255,0.1);
+  border-top-color: var(--accent-color);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
 .app {
@@ -138,6 +147,9 @@ button {
 
 section {
   padding: 6rem 0;
+  /* Paint performance: browser skips offscreen sections until needed */
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
 }
 
 /* Animations */
@@ -213,6 +225,7 @@ section {
   height: 100%;
   object-fit: cover;
   z-index: -2;
+  will-change: transform; /* GPU layer for smoother rendering */
 }
 
 .hero-overlay {
@@ -318,12 +331,13 @@ section {
   color: var(--text-secondary);
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
-  height: 60px;
+  min-height: 80px;
 }
 
 .model-price {
   font-weight: 600;
   color: white;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
@@ -1229,9 +1243,8 @@ footer {
   .car-hero { height: 100vh; }
 }
 
-/* ============================================================
-   PRICE LIST PAGE
-   ============================================================ */
+
+
 
 .pl-page {
   width: 100%;
@@ -1411,18 +1424,19 @@ footer {
 }
 
 .pl-card-img-wrap {
-  background: #f8f9fa;
+  background: linear-gradient(135deg, #f8f9fa 0%, #eef0f3 100%);
   height: 260px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 4px 8px;
 }
 
 .pl-card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.5s ease;
 }
 

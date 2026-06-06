@@ -12,9 +12,9 @@ import {
 } from 'lucide-react';
 
 const MAPS_EMBED =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.014964743652!2d106.66050997499041!3d-6.249999993759988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb7ca9a7c9b1%3A0x5f0c8e2e0e0e0e0e!2sBYD%20BIPO%20Serpong!5e0!3m2!1sen!2sid!4v1715000000000!5m2!1sen!2sid';
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8086769662814!2d106.6478851!3d-6.2888604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb226edfa761%3A0x56f490fbc556b2b1!2sWuling%20BSD%20MIMOSA!5e0!3m2!1sid!2sid!4v1780728714710!5m2!1sid!2sid';
 
-const MAPS_LINK = 'https://maps.app.goo.gl/HxGFJUE5kFowcmry5';
+const MAPS_LINK = 'https://maps.app.goo.gl/PGtRPgMk1We9psV99';
 
 const serviceAreas = [
   'Serpong', 'Tangerang Selatan', 'Gading Serpong',
@@ -59,15 +59,15 @@ export default function LocationPage() {
         <div className="container loc-hero-inner">
           <div className="loc-hero-text animate-fade-in">
             <span className="loc-hero-badge">
-              <MapPin size={13} /> Dealer Resmi BYD
+              <MapPin size={13} /> Dealer Resmi Wuling
             </span>
             <h1 className="loc-hero-title">
               Kunjungi<br />Showroom Kami
             </h1>
             <p className="loc-hero-subtitle">
-              <strong>BYD BIPO Serpong</strong> — dealer resmi BYD di Serpong,
+              <strong>Wuling Mimosa BSD</strong> — dealer resmi Wuling di BSD,
               Tangerang Selatan. Kami melayani test drive gratis, konsultasi,
-              dan pembelian untuk wilayah Serpong, Tangerang, Banten, dan Jakarta.
+              dan pembelian untuk wilayah BSD, Serpong, Tangerang, Banten, dan Jakarta.
             </p>
             <div className="loc-hero-actions">
               <a
@@ -111,7 +111,7 @@ export default function LocationPage() {
           {/* LEFT — Map embed */}
           <div className="loc-map-wrap">
             <iframe
-              title="BYD BIPO Serpong Location"
+              title="Wuling BSD MIMOSA Location"
               src={MAPS_EMBED}
               className="loc-map-iframe"
               allowFullScreen=""
@@ -130,7 +130,7 @@ export default function LocationPage() {
                 <h2 className="loc-info-card-title">Alamat Showroom</h2>
               </div>
               <div className="loc-info-card-body">
-                <p className="loc-address-name">BYD BIPO SERPONG</p>
+                <p className="loc-address-name">WULING MIMOSA BSD</p>
                 <p className="loc-address-detail">
                   Jl. Raya Serpong Km. 7 No. 30,<br />
                   Pakulonan, Kec. Serpong Utara,<br />
@@ -188,14 +188,14 @@ export default function LocationPage() {
               </div>
               <div className="loc-info-card-body">
                 <div className="loc-sales-profile">
-                  <div className="loc-sales-avatar">RB</div>
+                  <div className="loc-sales-avatar">WM</div>
                   <div>
-                    <p className="loc-sales-name">Rafi Brand Consultan</p>
-                    <p className="loc-sales-role">Sales Executive BYD BIPO Serpong</p>
+                    <p className="loc-sales-name">Tim Sales Wuling Mimosa BSD</p>
+                    <p className="loc-sales-role">Sales Executive Wuling Mimosa BSD</p>
                   </div>
                 </div>
                 <a
-                  href="https://wa.me/6288214786250?text=Halo%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20tentang%20BYD%20BIPO%20Serpong"
+                  href="https://wa.me/6288214786250?text=Halo%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20tentang%20Wuling%20Mimosa%20BSD"
                   target="_blank"
                   rel="noreferrer"
                   className="loc-wa-btn"

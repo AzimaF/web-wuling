@@ -1,6 +1,341 @@
-import React, { useState } from 'react';
-import { Phone, ChevronLeft, ChevronRight, Zap, Gauge, Battery, Timer, Check } from 'lucide-react';
+import React, { useState, useRef, useCallback } from 'react';
+import { Phone, ChevronLeft, ChevronRight, Zap, Gauge, Battery, Timer, Check, RotateCcw, RotateCw } from 'lucide-react';
 
+// ── 3D View angle definitions ─────────────────────────────────────────────────
+const VIEW_ANGLES = [
+  {
+    key: 'front-quarter',
+    label: 'Depan',
+    icon: '⬡',
+    description: 'Tampak Depan ¾',
+    imgStyle: {
+      transform: 'scaleX(1)',
+      filter: 'brightness(1)',
+    },
+    bgGradient: 'radial-gradient(ellipse at 30% 60%, rgba(0,102,204,0.07) 0%, transparent 70%), linear-gradient(135deg, #f0f4f8 0%, #e8ecf0 100%)',
+  },
+  {
+    key: 'side',
+    label: 'Samping',
+    icon: '◻',
+    description: 'Tampak Samping',
+    imgStyle: {
+      transform: 'scaleX(-1.12) translateX(-4%)',
+      filter: 'brightness(0.97)',
+    },
+    bgGradient: 'radial-gradient(ellipse at 50% 70%, rgba(0,80,160,0.06) 0%, transparent 70%), linear-gradient(135deg, #eef2f6 0%, #e4e8ec 100%)',
+  },
+];
+
+
+// ── Car 3D Viewer Component ────────────────────────────────────────────────────
+function Car3DViewer({ car, selectedColor, onColorChange }) {
+  const [activeView, setActiveView] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStartX, setDragStartX] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const containerRef = useRef(null);
+
+  const currentImage = car.colors[selectedColor]?.image || car.colorImage || car.heroImage;
+  const currentView = VIEW_ANGLES[activeView];
+
+  const changeView = useCallback((newIdx) => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setActiveView(newIdx);
+      setIsTransitioning(false);
+    }, 120);
+  }, [isTransitioning]);
+
+  const prevView = () => changeView((activeView - 1 + VIEW_ANGLES.length) % VIEW_ANGLES.length);
+  const nextView = () => changeView((activeView + 1) % VIEW_ANGLES.length);
+
+  // Drag-to-rotate
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setDragStartX(e.clientX);
+  };
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    const diff = e.clientX - dragStartX;
+    if (Math.abs(diff) > 60) {
+      if (diff < 0) nextView();
+      else prevView();
+      setDragStartX(e.clientX);
+    }
+  };
+  const handleMouseUp = () => setIsDragging(false);
+
+  // Touch
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    setDragStartX(e.touches[0].clientX);
+  };
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    const diff = e.touches[0].clientX - dragStartX;
+    if (Math.abs(diff) > 50) {
+      if (diff < 0) nextView();
+      else prevView();
+      setDragStartX(e.touches[0].clientX);
+    }
+  };
+  const handleTouchEnd = () => setIsDragging(false);
+
+  return (
+    <div style={{ width: '100%' }}>
+      {/* ── 3D Stage ── */}
+      <div
+        ref={containerRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        style={{
+          position: 'relative',
+          width: '100%',
+          maxWidth: '720px',
+          margin: '0 auto',
+          background: currentView.bgGradient,
+          borderRadius: '20px',
+          overflow: 'hidden',
+          cursor: isDragging ? 'grabbing' : 'grab',
+          userSelect: 'none',
+          transition: 'background 0.5s ease',
+          boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+        }}
+      >
+        {/* View label badge */}
+        <div style={{
+          position: 'absolute',
+          top: '14px',
+          left: '14px',
+          background: 'rgba(17,24,39,0.7)',
+          color: '#fff',
+          fontSize: '0.72rem',
+          fontWeight: '700',
+          letterSpacing: '0.1em',
+          textTransform: 'uppercase',
+          padding: '4px 12px',
+          borderRadius: '50px',
+          backdropFilter: 'blur(6px)',
+          zIndex: 5,
+          display: 'flex',
+          alignItems: 'center',
+          gap: '6px',
+        }}>
+          <span style={{ fontSize: '1rem' }}>🔄</span>
+          {currentView.description}
+        </div>
+
+        {/* Drag hint */}
+        <div style={{
+          position: 'absolute',
+          top: '14px',
+          right: '14px',
+          background: 'rgba(255,255,255,0.75)',
+          color: '#374151',
+          fontSize: '0.65rem',
+          fontWeight: '600',
+          padding: '3px 10px',
+          borderRadius: '50px',
+          backdropFilter: 'blur(4px)',
+          zIndex: 5,
+          display: 'flex',
+          alignItems: 'center',
+          gap: '4px',
+        }}>
+          ← Geser untuk Rotasi →
+        </div>
+
+        {/* Car Image */}
+        <div style={{
+          padding: '28px 20px 18px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '280px',
+        }}>
+          <img
+            src={currentImage}
+            alt={`${car.name} — ${car.colors[selectedColor]?.name || ''} — ${currentView.label}`}
+            style={{
+              width: '100%',
+              maxWidth: '580px',
+              height: 'auto',
+              objectFit: 'contain',
+              opacity: isTransitioning ? 0 : 1,
+              transition: 'opacity 0.15s ease, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+              ...(currentView.imgStyle || {}),
+              pointerEvents: 'none',
+              filter: [currentView.imgStyle?.filter, 'drop-shadow(0 8px 16px rgba(0,0,0,0.12))'].filter(Boolean).join(' '),
+            }}
+            loading="lazy"
+            draggable="false"
+          />
+        </div>
+
+        {/* Shadow under car */}
+        <div style={{
+          width: '60%',
+          height: '16px',
+          background: 'radial-gradient(ellipse, rgba(0,0,0,0.12) 0%, transparent 70%)',
+          margin: '0 auto 18px',
+        }} />
+
+        {/* Prev / Next arrows */}
+        <button
+          onClick={prevView}
+          aria-label="Tampilan sebelumnya"
+          style={{
+            position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)',
+            background: 'rgba(255,255,255,0.85)', border: 'none', borderRadius: '50%',
+            width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+            cursor: 'pointer', zIndex: 4, boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
+            transition: 'background 0.2s, transform 0.2s',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'; }}
+          onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.85)'; e.currentTarget.style.transform = 'translateY(-50%) scale(1)'; }}
+        >
+          <RotateCcw size={16} color="#374151" />
+        </button>
+        <button
+          onClick={nextView}
+          aria-label="Tampilan berikutnya"
+          style={{
+            position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)',
+            background: 'rgba(255,255,255,0.85)', border: 'none', borderRadius: '50%',
+            width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+            cursor: 'pointer', zIndex: 4, boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
+            transition: 'background 0.2s, transform 0.2s',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'; }}
+          onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.85)'; e.currentTarget.style.transform = 'translateY(-50%) scale(1)'; }}
+        >
+          <RotateCw size={16} color="#374151" />
+        </button>
+      </div>
+
+      {/* ── View Selector Tabs ── */}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '8px',
+        marginTop: '16px',
+      }}>
+        {VIEW_ANGLES.map((v, i) => (
+          <button
+            key={v.key}
+            onClick={() => changeView(i)}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '4px',
+              padding: '8px 20px',
+              borderRadius: '10px',
+              border: activeView === i ? '2px solid #0066cc' : '2px solid #e5e7eb',
+              background: activeView === i ? '#eff6ff' : '#f9fafb',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              fontFamily: "'Inter', sans-serif",
+            }}
+          >
+            <span style={{
+              fontSize: '0.82rem',
+              fontWeight: '700',
+              color: activeView === i ? '#0066cc' : '#6b7280',
+              letterSpacing: '0.02em',
+            }}>
+              {v.label}
+            </span>
+            {/* Dot indicator */}
+            <span style={{
+              width: '6px', height: '6px', borderRadius: '50%',
+              background: activeView === i ? '#0066cc' : '#d1d5db',
+              transition: 'background 0.2s',
+            }} />
+          </button>
+        ))}
+      </div>
+
+      {/* ── Color Swatches ── */}
+      <div style={{ marginTop: '20px' }}>
+        <p style={{
+          textAlign: 'center',
+          fontSize: '0.82rem',
+          fontWeight: '600',
+          color: '#6b7280',
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          marginBottom: '12px',
+        }}>
+          Pilih Warna — <span style={{ color: '#111827', fontWeight: '700' }}>{car.colors[selectedColor]?.name}</span>
+        </p>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          flexWrap: 'wrap',
+          gap: '10px',
+        }}>
+          {car.colors.map((c, i) => (
+            <button
+              key={i}
+              onClick={() => onColorChange(i)}
+              title={c.name}
+              aria-label={`Pilih warna ${c.name}`}
+              aria-pressed={selectedColor === i}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '6px',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '4px',
+              }}
+            >
+              <span style={{
+                display: 'block',
+                width: '36px',
+                height: '36px',
+                borderRadius: '50%',
+                backgroundColor: c.hex,
+                border: selectedColor === i
+                  ? '3px solid #0066cc'
+                  : '2px solid #d1d5db',
+                boxShadow: selectedColor === i
+                  ? '0 0 0 3px rgba(0,102,204,0.2)'
+                  : '0 1px 3px rgba(0,0,0,0.1)',
+                transition: 'all 0.2s ease',
+                transform: selectedColor === i ? 'scale(1.15)' : 'scale(1)',
+              }} />
+              {selectedColor === i && (
+                <span style={{
+                  fontSize: '0.65rem',
+                  fontWeight: '600',
+                  color: '#0066cc',
+                  maxWidth: '60px',
+                  textAlign: 'center',
+                  lineHeight: '1.2',
+                }}>
+                  {c.name}
+                </span>
+              )}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Car Detail Page ────────────────────────────────────────────────────────────
 export default function CarDetailPage({ car, onBack }) {
   const [activeVariant, setActiveVariant] = useState(0);
   const [activeSpecTab, setActiveSpecTab] = useState(Object.keys(car.fullSpecs)[0]);
@@ -11,7 +346,7 @@ export default function CarDetailPage({ car, onBack }) {
   return (
     <div className="car-detail-page">
 
-      {/* ── Header Banner (Like Price List) ── */}
+      {/* ── Header Banner ── */}
       <section className="car-header-banner">
         <div className="container car-header-content">
           <button className="car-back-btn" onClick={onBack}>
@@ -44,14 +379,26 @@ export default function CarDetailPage({ car, onBack }) {
         </div>
       </section>
 
-      {/* ── Cover Image Section ── */}
-      <section className="car-cover-section">
+      {/* ── 3D Color Viewer Section ── */}
+      <section className="car-colors-section" style={{ background: '#f5f7fa' }}>
         <div className="container">
-          <img src={car.coverImage || car.heroImage} alt={car.name} className="car-cover-img" />
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            <h2 className="section-title color-title" style={{ marginBottom: '0.5rem' }}>
+              Pilihan Warna & Tampilan 3D
+            </h2>
+            <p style={{ color: '#6b7280', fontSize: '0.95rem' }}>
+              Geser gambar atau klik tombol untuk melihat tampilan Depan, Samping, dan Belakang
+            </p>
+          </div>
+          <Car3DViewer
+            car={car}
+            selectedColor={selectedColor}
+            onColorChange={setSelectedColor}
+          />
         </div>
       </section>
 
-      {/* ── Quick Stats Bar ──────────────────────────────── */}
+      {/* ── Quick Stats Bar ── */}
       <div className="car-stats-bar">
         <div className="container car-stats-inner">
           <div className="car-stat-item">
@@ -88,7 +435,7 @@ export default function CarDetailPage({ car, onBack }) {
         </div>
       </div>
 
-      {/* ── Description & Highlights ─────────────────────── */}
+      {/* ── Description & Highlights ── */}
       <section className="car-about">
         <div className="container car-about-inner">
           <div className="car-about-text">
@@ -110,7 +457,7 @@ export default function CarDetailPage({ car, onBack }) {
         </div>
       </section>
 
-      {/* ── Variant Selector ─────────────────────────────── */}
+      {/* ── Variant Selector ── */}
       <section className="car-variants-section">
         <div className="container">
           <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
@@ -158,64 +505,7 @@ export default function CarDetailPage({ car, onBack }) {
         </div>
       </section>
 
-      {/* ── Color Picker ─────────────────────────────────── */}
-      <section className="car-colors-section">
-        <div className="container">
-          <h2 className="section-title color-title">
-            Pilihan Warna
-          </h2>
-
-          <div className="color-stage-minimal">
-            <div className="color-image-wrapper" style={{ position: 'relative', width: '80%', maxWidth: '700px', margin: '0 auto' }}>
-              {car.colors.map((c, i) => (
-                <img
-                  key={i}
-                  src={c.image || car.colorImage || car.heroImage}
-                  alt={`${car.name} — ${c.name}`}
-                  className={`color-car-img-minimal ${selectedColor === i ? 'active' : ''}`}
-                  style={{
-                    position: i === 0 ? 'relative' : 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: 'auto',
-                    opacity: selectedColor === i ? 1 : 0,
-                    transition: 'opacity 0.6s ease-in-out',
-                    zIndex: selectedColor === i ? 2 : 1,
-                    objectFit: 'contain'
-                  }}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="color-swatch-area">
-            <div className="color-swatch-row-left">
-              {car.colors.map((c, i) => (
-                <div key={i} className={`swatch-wrapper ${selectedColor === i ? 'active' : ''}`}>
-                  <button
-                    className="color-swatch-btn-min"
-                    onClick={() => setSelectedColor(i)}
-                    title={c.name}
-                    aria-label={c.name}
-                  >
-                    <span
-                      className="color-swatch-min"
-                      style={{ backgroundColor: c.hex }}
-                    />
-                  </button>
-                  {selectedColor === i && (
-                    <span className="swatch-active-label">{c.name}</span>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* ── Full Specifications ──────────────────────────── */}
+      {/* ── Full Specifications ── */}
       <section id="car-specs" className="car-specs-section">
         <div className="container">
           <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
@@ -243,7 +533,7 @@ export default function CarDetailPage({ car, onBack }) {
         </div>
       </section>
 
-      {/* ── CTA Banner ──────────────────────────────────── */}
+      {/* ── CTA Banner ── */}
       <section className="car-cta-section">
         <div className="container car-cta-inner">
           <div>
