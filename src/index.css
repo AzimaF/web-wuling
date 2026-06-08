@@ -496,7 +496,7 @@ footer {
   transform: scale(1.1);
 }
 
-/* Hamburger button — hidden on desktop, shown on mobile via @media */
+/* Hamburger button â€” hidden on desktop, shown on mobile via @media */
 .mobile-menu-btn {
   display: none;
   background: transparent;
@@ -506,7 +506,7 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* Mobile Sidebar Menu ─────────────────────────────────── */
+/* Mobile Sidebar Menu â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .mob-sidebar {
   position: fixed;
   top: 0;
@@ -810,7 +810,7 @@ footer {
   color: #333333;
 }
 
-/* ── Hero ── */
+/* â”€â”€ Hero â”€â”€ */
 .car-hero {
   position: relative;
   height: 90vh;
@@ -930,7 +930,7 @@ footer {
   flex-wrap: wrap;
 }
 
-/* ── Stats Bar ── */
+/* â”€â”€ Stats Bar â”€â”€ */
 .car-stats-bar {
   background: #f8f9fa;
   border-bottom: 1px solid #e5e7eb;
@@ -958,7 +958,7 @@ footer {
 .stat-label { font-size: 0.85rem; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; }
 .stat-value { font-size: 1rem; font-weight: 600; color: #111827; font-family: 'Outfit', sans-serif; }
 
-/* ── About ── */
+/* â”€â”€ About â”€â”€ */
 .car-about {
   padding: 6rem 0;
   background: #ffffff;
@@ -999,7 +999,7 @@ footer {
   display: flex;
 }
 
-/* ── Variants ── */
+/* â”€â”€ Variants â”€â”€ */
 .car-variants-section {
   padding: 5rem 0;
   background: #ffffff;
@@ -1079,7 +1079,7 @@ footer {
   border-radius: 50px;
 }
 
-/* ── Colors (Minimal Color Picker) ── */
+/* â”€â”€ Colors (Minimal Color Picker) â”€â”€ */
 .car-colors-section {
   padding: 5rem 0;
   background: #ffffff; /* White background matching official design */
@@ -1174,7 +1174,7 @@ footer {
 }
 
 
-/* ── Specs ── */
+/* â”€â”€ Specs â”€â”€ */
 .car-specs-section {
   padding: 5rem 0;
   background: #f9fafb;
@@ -1219,7 +1219,7 @@ footer {
 .spec-key { color: #6b7280; font-size: 0.9rem; }
 .spec-val { color: #111827; font-weight: 600; font-size: 0.9rem; font-family: 'Outfit', sans-serif; }
 
-/* ── CTA ── */
+/* â”€â”€ CTA â”€â”€ */
 .car-cta-section {
   padding: 5rem 0;
   background: linear-gradient(135deg, #0a0a14 0%, #0d1a35 100%) !important;
@@ -1246,7 +1246,7 @@ footer {
   flex-shrink: 0;
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 768px) {
   .car-hero-name { font-size: 2.5rem; }
   .car-about-inner { grid-template-columns: 1fr; gap: 2rem; }
@@ -1265,7 +1265,7 @@ footer {
   min-height: 100vh;
 }
 
-/* ── Hero ── */
+/* â”€â”€ Hero â”€â”€ */
 .pl-hero {
   position: relative;
   background: linear-gradient(135deg, #0a0a14 0%, #0d1a35 50%, #0a0a14 100%);
@@ -1324,7 +1324,7 @@ footer {
   line-height: 1.7;
 }
 
-/* ── Filter Bar ── */
+/* â”€â”€ Filter Bar â”€â”€ */
 .pl-filter-bar {
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
@@ -1390,7 +1390,7 @@ footer {
   margin-left: auto;
 }
 
-/* ── Cards Grid ── */
+/* â”€â”€ Cards Grid â”€â”€ */
 .pl-content {
   padding: 2.5rem 0 4rem;
 }
@@ -1401,7 +1401,7 @@ footer {
   gap: 1.5rem;
 }
 
-/* ── Single Card ── */
+/* â”€â”€ Single Card â”€â”€ */
 .pl-card {
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -1471,7 +1471,7 @@ footer {
   font-family: 'Outfit', sans-serif;
 }
 
-/* ── Variant Tabs ── */
+/* â”€â”€ Variant Tabs â”€â”€ */
 .pl-variant-tabs {
   display: flex;
   gap: 0.5rem;
@@ -1521,7 +1521,7 @@ footer {
   color: #ffffff;
 }
 
-/* ── Price Block ── */
+/* â”€â”€ Price Block â”€â”€ */
 .pl-price-block {
   display: flex;
   flex-direction: column;
@@ -1547,7 +1547,7 @@ footer {
   color: #9ca3af;
 }
 
-/* ── Specs Grid ── */
+/* â”€â”€ Specs Grid â”€â”€ */
 .pl-specs-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -1580,7 +1580,7 @@ footer {
   letter-spacing: 0.04em;
 }
 
-/* ── Card CTA ── */
+/* â”€â”€ Card CTA â”€â”€ */
 .pl-card-cta {
   display: flex;
   gap: 0.65rem;
@@ -1633,7 +1633,7 @@ footer {
   border-color: #1f2937;
 }
 
-/* ── Empty State ── */
+/* â”€â”€ Empty State â”€â”€ */
 .pl-empty {
   text-align: center;
   padding: 4rem;
@@ -1641,7 +1641,7 @@ footer {
   font-size: 1rem;
 }
 
-/* ── Bottom CTA ── */
+/* â”€â”€ Bottom CTA â”€â”€ */
 .pl-bottom-cta {
   background: linear-gradient(135deg, #0a0a14 0%, #0d1a35 100%);
   padding: 4rem 0;
@@ -1671,7 +1671,7 @@ footer {
   line-height: 1.6;
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 900px) {
   .pl-grid { grid-template-columns: 1fr; }
   .pl-hero-title { font-size: 2.2rem; }
@@ -1696,7 +1696,7 @@ footer {
   background: #f0f2f5;
 }
 
-/* ── Hero ── */
+/* â”€â”€ Hero â”€â”€ */
 .loc-hero {
   position: relative;
   background: linear-gradient(135deg, #06060f 0%, #0c1a35 55%, #06060f 100%);
@@ -1811,7 +1811,7 @@ footer {
   font-family: 'Outfit', sans-serif;
 }
 
-/* ── Main: Map + Info ── */
+/* â”€â”€ Main: Map + Info â”€â”€ */
 .loc-main {
   padding: 3rem 0;
   background: #f0f2f5;
@@ -2018,7 +2018,7 @@ footer {
   transform: translateY(-1px);
 }
 
-/* ── Service Area ── */
+/* â”€â”€ Service Area â”€â”€ */
 .loc-area-section {
   background: #ffffff;
   border-top: 1px solid #e5e7eb;
@@ -2066,7 +2066,7 @@ footer {
   color: #ffffff;
 }
 
-/* ── Bottom CTA ── */
+/* â”€â”€ Bottom CTA â”€â”€ */
 .loc-cta-section {
   background: linear-gradient(135deg, #06060f 0%, #0c1a35 100%);
   padding: 4.5rem 0;
@@ -2103,7 +2103,7 @@ footer {
   flex-shrink: 0;
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 960px) {
   .loc-main-inner { grid-template-columns: 1fr; }
   .loc-map-wrap { height: 360px; }
@@ -2128,7 +2128,7 @@ footer {
   background: #f0f2f5;
 }
 
-/* ── Hero ── */
+/* â”€â”€ Hero â”€â”€ */
 .art-hero {
   position: relative;
   background: linear-gradient(135deg, #06060f 0%, #0d1a35 55%, #06060f 100%);
@@ -2222,7 +2222,7 @@ footer {
   background: rgba(255,255,255,0.1);
 }
 
-/* ── Filter Bar ── */
+/* â”€â”€ Filter Bar â”€â”€ */
 .art-filter-bar {
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
@@ -2270,12 +2270,12 @@ footer {
   margin-left: auto;
 }
 
-/* ── Content Area ── */
+/* â”€â”€ Content Area â”€â”€ */
 .art-content {
   padding: 2.5rem 0 4rem;
 }
 
-/* ── Article Card (base) ── */
+/* â”€â”€ Article Card (base) â”€â”€ */
 .art-card {
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -2292,7 +2292,7 @@ footer {
   transform: translateY(-3px);
 }
 
-/* ── Featured card (full-width horizontal) ── */
+/* â”€â”€ Featured card (full-width horizontal) â”€â”€ */
 .art-card-featured {
   flex-direction: row;
   margin-bottom: 1.5rem;
@@ -2319,7 +2319,7 @@ footer {
   -webkit-line-clamp: 4;
 }
 
-/* ── Image wrap ── */
+/* â”€â”€ Image wrap â”€â”€ */
 .art-card-img-wrap {
   position: relative;
   height: 220px;
@@ -2344,7 +2344,7 @@ footer {
   pointer-events: none;
 }
 
-/* ── Card body ── */
+/* â”€â”€ Card body â”€â”€ */
 .art-card-body {
   padding: 1.4rem;
   display: flex;
@@ -2381,7 +2381,7 @@ footer {
   color: #9ca3af;
 }
 
-/* ── Card title ── */
+/* â”€â”€ Card title â”€â”€ */
 .art-card-title {
   font-size: 1.08rem;
   font-weight: 700;
@@ -2398,7 +2398,7 @@ footer {
 
 .art-card:hover .art-card-title { color: #0066cc; }
 
-/* ── Card excerpt ── */
+/* â”€â”€ Card excerpt â”€â”€ */
 .art-card-excerpt {
   font-size: 0.875rem;
   color: #6b7280;
@@ -2411,7 +2411,7 @@ footer {
   margin: 0;
 }
 
-/* ── Read button ── */
+/* â”€â”€ Read button â”€â”€ */
 .art-read-btn {
   display: inline-flex;
   align-items: center;
@@ -2433,14 +2433,14 @@ footer {
   gap: 8px;
 }
 
-/* ── Grid (non-featured articles) ── */
+/* â”€â”€ Grid (non-featured articles) â”€â”€ */
 .art-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
 }
 
-/* ── Empty state ── */
+/* â”€â”€ Empty state â”€â”€ */
 .art-empty {
   display: flex;
   flex-direction: column;
@@ -2455,7 +2455,7 @@ footer {
 .art-empty-title { font-size: 1.15rem; font-weight: 600; color: #374151; }
 .art-empty-sub { font-size: 0.9rem; color: #9ca3af; }
 
-/* ── Bottom CTA ── */
+/* â”€â”€ Bottom CTA â”€â”€ */
 .art-cta-section {
   background: linear-gradient(135deg, #06060f 0%, #0c1a35 100%);
   padding: 4.5rem 0;
@@ -2485,7 +2485,7 @@ footer {
   line-height: 1.6;
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1024px) {
   .art-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -2515,7 +2515,7 @@ footer {
 
 .car-detail-page .section-title { color: #111827; }
 
-/* ── Detail Page New Header ── */
+/* â”€â”€ Detail Page New Header â”€â”€ */
 .car-header-banner {
   background: linear-gradient(135deg, #0a0a14 0%, #0d1a35 50%, #0a0a14 100%);
   padding: 4rem 0 2rem;
@@ -2548,5 +2548,18 @@ footer {
 }
 .car-stats-bar {
   background: #ffffff !important;
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 

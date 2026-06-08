@@ -414,19 +414,12 @@ export default function CarDetailPage({ car, onBack }) {
               <p className="stat-value">{variant.specs.torque}</p>
             </div>
           </div>
-          <div className="car-stat-divider" />
-          <div className="car-stat-item">
-            <Timer size={20} className="stat-icon" />
-            <div>
-              <p className="stat-label">0–100 km/h</p>
-              <p className="stat-value">{variant.specs.acceleration}</p>
-            </div>
-          </div>
+
         </div>
       </div>
 
       {/* ── Description & Highlights ── */}
-      <section className="car-about">
+      <section className="car-about reveal">
         <div className="container car-about-inner">
           <div className="car-about-text">
             <h2 className="section-title" style={{ textAlign: 'left' }}>
@@ -448,7 +441,7 @@ export default function CarDetailPage({ car, onBack }) {
       </section>
 
       {/* ── Variant Selector ── */}
-      <section className="car-variants-section">
+      <section className="car-variants-section reveal">
         <div className="container">
           <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
             Pilih Varian
@@ -480,11 +473,7 @@ export default function CarDetailPage({ car, onBack }) {
                     <span className="vspec-label">Baterai</span>
                     <span className="vspec-val">{v.specs.battery}</span>
                   </div>
-                  <div className="vspec-item">
-                    <Timer size={14} className="vspec-icon" />
-                    <span className="vspec-label">0–100</span>
-                    <span className="vspec-val">{v.specs.acceleration}</span>
-                  </div>
+
                 </div>
                 {activeVariant === i && (
                   <div className="variant-active-badge">Dipilih</div>
@@ -496,7 +485,7 @@ export default function CarDetailPage({ car, onBack }) {
       </section>
 
       {/* ── 3D Color Viewer Section ── */}
-      <section className="car-colors-section" style={{ background: '#f5f7fa' }}>
+      <section className="car-colors-section reveal" style={{ background: '#f5f7fa' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <h2 className="section-title color-title" style={{ marginBottom: '0.5rem' }}>
@@ -543,7 +532,7 @@ export default function CarDetailPage({ car, onBack }) {
       </section>
 
       {/* ── CTA Banner ── */}
-      <section className="car-cta-section">
+      <section className="car-cta-section reveal">
         <div className="container car-cta-inner">
           <div>
             <h2 className="car-cta-title">Tertarik dengan {car.name}?</h2>

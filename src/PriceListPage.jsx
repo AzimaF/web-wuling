@@ -40,7 +40,7 @@ function PriceCard({ car, onViewDetail }) {
   );
 
   return (
-    <div className="pl-card">
+    <div className="pl-card reveal">
       {/* Category badge */}
       <span className="pl-card-category">{car.category}</span>
 
@@ -92,10 +92,7 @@ function PriceCard({ car, onViewDetail }) {
             <span className="pl-spec-val">{v.specs.battery || '-'}</span>
             <span className="pl-spec-key">Baterai</span>
           </div>
-          <div className="pl-spec-box">
-            <span className="pl-spec-val">{v.specs.acceleration || '-'}</span>
-            <span className="pl-spec-key">0–100 km/h</span>
-          </div>
+
         </div>
 
         {/* CTA buttons */}

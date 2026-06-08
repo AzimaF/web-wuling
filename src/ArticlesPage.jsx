@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Calendar, Tag, Search, BookOpen } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Calendar, Tag, Search, BookOpen } from 'lucide-react';
 
 // ── Article Data ──────────────────────────────────────────────────────────────
 const articles = [
@@ -192,7 +192,7 @@ const CATEGORIES = ['Semua', 'Review', 'Comparison', 'Test Drive', 'Tips', 'Pand
 function ArticleCard({ article, featured = false, onSelect }) {
   return (
     <div 
-      className={`art-card ${featured ? 'art-card-featured' : ''}`} 
+      className={`art-card reveal ${featured ? 'art-card-featured' : ''}`} 
       onClick={() => onSelect(article)}
       style={{ cursor: 'pointer' }}
     >
@@ -265,24 +265,31 @@ export default function ArticlesPage() {
               window.scrollTo({ top: 0, behavior: 'instant' });
             }}
             style={{
-              background: 'none',
-              border: 'none',
-              color: '#0066cc',
-              fontSize: '0.95rem',
+              backgroundColor: '#f3f4f6',
+              border: '1px solid #e5e7eb',
+              color: '#374151',
+              fontSize: '0.9rem',
               fontWeight: '600',
               cursor: 'pointer',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '6px',
-              padding: '0',
+              gap: '8px',
+              padding: '0.6rem 1.2rem',
+              borderRadius: '8px',
               marginBottom: '2rem',
-              transition: 'color 0.2s',
+              transition: 'all 0.2s ease',
               fontFamily: "'Inter', sans-serif"
             }}
-            onMouseEnter={(e) => e.target.style.color = '#0052a3'}
-            onMouseLeave={(e) => e.target.style.color = '#0066cc'}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#e5e7eb';
+              e.currentTarget.style.color = '#111827';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#f3f4f6';
+              e.currentTarget.style.color = '#374151';
+            }}
           >
-            ← Kembali ke Daftar Artikel
+            <ArrowLeft size={16} /> Kembali ke Daftar Artikel
           </button>
 
           {/* Meta Info (No read time) */}

@@ -99,6 +99,36 @@ function App() {
     return () => observer.disconnect();
   }, [currentPage]);
 
+  // 4. Global Intersection Observer for scroll reveal animations
+  useEffect(() => {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const handleMutations = () => {
+      const reveals = document.querySelectorAll('.reveal:not(.observed)');
+      reveals.forEach(el => {
+        revealObserver.observe(el);
+        el.classList.add('observed');
+      });
+    };
+
+    handleMutations(); // Initial check
+    const mutationObserver = new MutationObserver(handleMutations);
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      revealObserver.disconnect();
+      mutationObserver.disconnect();
+    };
+  }, []);
+
   const models = [
     {
       id: 'new-air-ev',
@@ -388,7 +418,7 @@ function App() {
 
               <div className="features-grid">
                 {features.map((feature, idx) => (
-                  <div className="glass-card" key={idx}>
+                  <div className="glass-card feature-card" key={idx}>
                     <div className="feature-icon">
                       {feature.icon}
                     </div>
