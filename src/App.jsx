@@ -164,7 +164,7 @@ function App() {
             setCurrentPage('home');
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}>
-            <img src="./images/Logo-dashboard-wuling.png" alt="Logo Wuling Mimosa BSD" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+            <img src="./images/Dashboard-mimosa.png" alt="Logo Wuling Mimosa BSD" className="nav-logo-img" />
           </a>
           <div className="navbar-links" role="menubar">
             <button className={`nav-btn ${isCarsMenuOpen ? 'active' : ''}`} onClick={() => setIsCarsMenuOpen(!isCarsMenuOpen)} aria-expanded={isCarsMenuOpen} aria-haspopup="true" aria-controls="mega-menu">Cars</button>
@@ -234,7 +234,7 @@ function App() {
         {/* Header: Wuling logo + Close */}
         <div className="mob-sidebar-header">
           <span className="mob-sidebar-brand">
-            <img src="./images/Logo-dashboard-wuling.png" alt="Logo Wuling Mimosa BSD" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
+            <img src="./images/Dashboard-mimosa.png" alt="Logo Wuling Mimosa BSD" style={{ height: '40px', width: 'auto', objectFit: 'contain', maxHeight: '100%' }} />
           </span>
           <button className="mob-sidebar-close" onClick={() => setIsMenuOpen(false)} aria-label="Tutup menu">
             &times;
@@ -586,10 +586,10 @@ function App() {
               <MapPin size={20} style={{ color: '#6b7280', flexShrink: 0, marginTop: '2px' }} />
               <div>
                 <p style={{ color: '#374151', fontSize: '0.95rem', marginBottom: '0.25rem' }}>Wuling Mimosa BSD</p>
-                <p style={{ color: '#6b7280', fontSize: '0.95rem', marginBottom: '0.25rem' }}>Jl. Raya Serpong Km. 7 No. 30, Pakulonan, Kec. Serpong Utara</p>
-                <p style={{ color: '#6b7280', fontSize: '0.95rem', marginBottom: '0.5rem' }}>Kota Tangerang Selatan, Banten 15326</p>
+                <p style={{ color: '#6b7280', fontSize: '0.95rem', marginBottom: '0.25rem' }}>Jl. BSD Boulevard Utara Kav. 21, Lengkong Kulon, Kec. Pagedangan</p>
+                <p style={{ color: '#6b7280', fontSize: '0.95rem', marginBottom: '0.5rem' }}>Kabupaten Tangerang, Banten 15331</p>
                 <a
-                  href="https://maps.app.goo.gl/HxGFJUE5kFowcmry5"
+                  href="https://maps.app.goo.gl/QptZWwwCvTkapXWv5"
                   target="_blank"
                   rel="noreferrer"
                   style={{ color: '#9ca3af', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '4px', textDecoration: 'none', transition: 'color 0.2s', marginBottom: '1.2rem' }}

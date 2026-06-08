@@ -191,6 +191,18 @@ section {
   gap: 0.5rem;
 }
 
+.nav-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .nav-logo-img {
+    height: 30px;
+  }
+}
+
 .navbar-links {
   display: flex;
   gap: 2rem;
