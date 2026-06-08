@@ -26,6 +26,13 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [isCarsMenuOpen, setIsCarsMenuOpen] = useState(false);
   const [currentCar, setCurrentCar] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
 
 
@@ -94,12 +101,12 @@ function App() {
 
   const models = [
     {
-      id: 'darion-ev',
-      carDetailId: 'wuling-darion-ev',
-      name: 'Darion EV',
-      desc: 'MPV listrik keluarga premium dengan kabin 7-seater yang lapang dan jangkauan hingga 500 km.',
-      price: 'Mulai dari Rp399.000.000',
-      image: './images/Cover-Wuling/Cover-Darion.png',
+      id: 'new-air-ev',
+      carDetailId: 'wuling-new-air-ev',
+      name: 'New Air EV',
+      desc: 'Kendaraan listrik kota yang praktis, lincah, dan sangat hemat energi dengan jangkauan hingga 300 km.',
+      price: 'Mulai dari Rp229.000.000',
+      image: './images/Cover-Wuling/Cover-NewAIREV.png',
     },
     {
       id: 'eksion-ev',
@@ -110,12 +117,12 @@ function App() {
       image: './images/Cover-Wuling/Cover-Eksion.png',
     },
     {
-      id: 'new-cloud-ev',
-      carDetailId: 'wuling-new-cloud-ev',
-      name: 'New Cloud EV',
-      desc: 'Crossover listrik premium dengan panoramic sunroof dan layar sentuh 15.6 inch.',
-      price: 'Mulai dari Rp415.000.000',
-      image: './images/Cover-Wuling/Cover-NewCLOUDEV.png',
+      id: 'darion-ev',
+      carDetailId: 'wuling-darion-ev',
+      name: 'Darion EV',
+      desc: 'MPV listrik keluarga premium dengan kabin 7-seater yang lapang dan jangkauan hingga 540 km.',
+      price: 'Mulai dari Rp399.000.000',
+      image: './images/Cover-Wuling/Cover-Darion.png',
     }
   ];
 
@@ -196,9 +203,10 @@ function App() {
                   { name: 'New Binguo EV', img: './images/wuling/NewBINGUOEV-Starry_Black.png', id: 'wuling-new-binguo-ev' },
                   { name: 'New Cloud EV', img: './images/wuling/NewCLOUDEV-Pristine_White.png', id: 'wuling-new-cloud-ev' },
                   { name: 'Darion EV', img: './images/wuling/Darion_White.png', id: 'wuling-darion-ev' },
-                  { name: 'Darion PHEV', img: './images/wuling/Darion-Orchid_Purple.png', id: 'wuling-darion-phev' },
+                  { name: 'Darion PHEV', img: './images/wuling/DarionPHEV_White.png', id: 'wuling-darion-phev' },
                   { name: 'Eksion EV', img: './images/wuling/Eksion-White.png', id: 'wuling-eksion-ev' },
-                  { name: 'Eksion PHEV', img: './images/wuling/Eksion-Archipelago_Blue.png', id: 'wuling-eksion-phev' },
+                  { name: 'Eksion PHEV', img: './images/wuling/EksionPHEV-White.png', id: 'wuling-eksion-phev' },
+                  { name: 'Formo MAX', img: './images/wuling/FormoMAX-White.png', id: 'wuling-formo-max' },
                   { name: 'Mitra EV', img: './images/wuling/MitraEV-White.png', id: 'wuling-mitra-ev' },
                   { name: 'Almaz', img: './images/wuling/Almaz-Pristine_White.png', id: 'wuling-almaz' },
                   { name: 'Alvez', img: './images/wuling/Alvez-Pristine_White.png', id: 'wuling-alvez' },
@@ -247,6 +255,7 @@ function App() {
                 { name: 'Darion PHEV', id: 'wuling-darion-phev' },
                 { name: 'Eksion EV', id: 'wuling-eksion-ev' },
                 { name: 'Eksion PHEV', id: 'wuling-eksion-phev' },
+                { name: 'Formo MAX', id: 'wuling-formo-max' },
                 { name: 'Mitra EV', id: 'wuling-mitra-ev' },
                 { name: 'Almaz', id: 'wuling-almaz' },
                 { name: 'Alvez', id: 'wuling-alvez' },
@@ -275,24 +284,27 @@ function App() {
         <div className="page-home">
           {/* Hero Section */}
           <section className="hero" id="home" style={{ position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'flex-start', paddingTop: '24vh' }}>
-            <img
-              src="./images/CoverWebsite-Wuling/Halaman_1.png"
-              alt="Wuling Mimosa BSD — Dealer Resmi Wuling di BSD, Tangerang Selatan"
-              className="hero-bg"
-              fetchpriority="high"
-              decoding="async"
-              width="1920"
-              height="1080"
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                zIndex: -2
-              }}
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="./images/Cover-Website-Mobile/Halaman1-Mobile.png" />
+              <img
+                src="./images/CoverWebsite-Wuling/Halaman_1.png"
+                alt="Wuling Mimosa BSD — Dealer Resmi Wuling di BSD, Tangerang Selatan"
+                className="hero-bg"
+                fetchpriority="high"
+                decoding="async"
+                width="1920"
+                height="1080"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  zIndex: -2
+                }}
+              />
+            </picture>
             <div className="hero-overlay" style={{
               background: 'linear-gradient(to bottom, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.55) 45%, rgba(10, 10, 10, 0) 100%)'
             }}></div>
@@ -321,7 +333,7 @@ function App() {
           </section>
 
           {/* Models Section */}
-          <section id="models" style={{ background: 'linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.9)), url("./images/CoverWebsite-Wuling/Halaman_2.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <section id="models" style={{ background: `linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.9)), url("${isMobile ? './images/Cover-Website-Mobile/Halaman2-Mobile.png' : './images/CoverWebsite-Wuling/Halaman_2.png'}")`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="container">
               <div className="section-header">
                 <h2 className="section-title">Temukan Model Wuling Anda</h2>
@@ -365,7 +377,7 @@ function App() {
           </section>
 
           {/* Features Section */}
-          <section id="features" style={{ background: 'linear-gradient(rgba(10, 10, 10, 0.8), rgba(15, 10, 20, 0.85)), url("./images/CoverWebsite-Wuling/Halaman _3.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <section id="features" style={{ background: `linear-gradient(rgba(10, 10, 10, 0.8), rgba(15, 10, 20, 0.85)), url("${isMobile ? './images/Cover-Website-Mobile/Halaman3-Mobile.png' : './images/CoverWebsite-Wuling/Halaman _3.png'}")`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="container">
               <div className="section-header">
                 <h2 className="section-title">Terdepan dalam Inovasi Mobilitas Indonesia</h2>
@@ -389,7 +401,7 @@ function App() {
           </section>
 
           {/* Services Section */}
-          <section id="services" style={{ background: 'linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 15, 20, 0.9)), url("./images/CoverWebsite-Wuling/Halaman_4.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <section id="services" style={{ background: `linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 15, 20, 0.9)), url("${isMobile ? './images/Cover-Website-Mobile/Halaman4-Mobile.png' : './images/CoverWebsite-Wuling/Halaman_4.png'}")`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="container">
               <div className="section-header">
                 <h2 className="section-title">Layanan Komprehensif untuk Kepuasan Anda</h2>
@@ -416,7 +428,7 @@ function App() {
           </section>
 
           {/* Showroom Section */}
-          <section id="showroom" style={{ background: 'linear-gradient(rgba(15, 15, 15, 0.85), rgba(5, 5, 5, 0.95)), url("./images/CoverWebsite-Wuling/Halaman_5.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <section id="showroom" style={{ background: `linear-gradient(rgba(15, 15, 15, 0.85), rgba(5, 5, 5, 0.95)), url("${isMobile ? './images/Cover-Website-Mobile/Halaman5-Mobile.png' : './images/CoverWebsite-Wuling/Halaman_5.png'}")`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="container">
               <h2 className="section-title" style={{ marginBottom: '3rem', textAlign: 'left' }}>
                 Kunjungi Showroom Wuling<br />Mimosa BSD
@@ -503,7 +515,7 @@ function App() {
           </section>
 
           {/* Articles Section */}
-          <section id="articles-home" style={{ background: 'linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.9)), url("./images/CoverWebsite-Wuling/Halaman_6.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <section id="articles-home" style={{ background: `linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.9)), url("${isMobile ? './images/Cover-Website-Mobile/Halaman6-Mobile.png' : './images/CoverWebsite-Wuling/Halaman_6.png'}")`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="container" style={{ textAlign: 'center', padding: '4rem 0' }}>
               <h2 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1rem', fontFamily: 'Outfit, sans-serif' }}>Pelajari Lebih Lanjut Tentang Wuling</h2>
               <p style={{ fontSize: '1.2rem', color: '#e5e7eb', marginBottom: '2.5rem', maxWidth: '800px', margin: '0 auto 2.5rem' }}>
@@ -552,19 +564,19 @@ function App() {
             {/* Left Column */}
             <div style={{ flex: '1', minWidth: '300px' }}>
               <h3 style={{ color: '#1f2937', fontSize: '1.2rem', marginBottom: '1rem', fontFamily: 'Inter, sans-serif' }}>Contact Us</h3>
-              <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>Sales: Tim Sales Wuling Mimosa BSD</p>
+              <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>Sales: Rafi Wuling Mimosa BSD</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 <a href="https://wa.me/6288214786250" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#4b5563', textDecoration: 'none', fontSize: '0.95rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#25D366'} onMouseLeave={(e) => e.currentTarget.style.color = '#4b5563'}>
                   <Phone size={18} />
                   <span>+62 882-1478-6250</span>
                 </a>
-                <a href="mailto:mimosawuling@gmail.com" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#4b5563', textDecoration: 'none', fontSize: '0.95rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#ea4335'} onMouseLeave={(e) => e.currentTarget.style.color = '#4b5563'}>
+                <a href="mailto:Wulingbsd.rafi@gmail.com" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#4b5563', textDecoration: 'none', fontSize: '0.95rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#ea4335'} onMouseLeave={(e) => e.currentTarget.style.color = '#4b5563'}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  <span>mimosawuling@gmail.com</span>
+                  <span>Wulingbsd.rafi@gmail.com</span>
                 </a>
-                <a href="https://www.instagram.com/mimosawuling/" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#4b5563', textDecoration: 'none', fontSize: '0.95rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#e1306c'} onMouseLeave={(e) => e.currentTarget.style.color = '#4b5563'}>
+                <a href="https://www.instagram.com/rafi.wulingbsd/" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#4b5563', textDecoration: 'none', fontSize: '0.95rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#e1306c'} onMouseLeave={(e) => e.currentTarget.style.color = '#4b5563'}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                  <span>@mimosawuling</span>
+                  <span>@rafi.wulingbsd</span>
                 </a>
               </div>
             </div>

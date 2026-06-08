@@ -379,24 +379,14 @@ export default function CarDetailPage({ car, onBack }) {
         </div>
       </section>
 
-      {/* ── 3D Color Viewer Section ── */}
-      <section className="car-colors-section" style={{ background: '#f5f7fa' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <h2 className="section-title color-title" style={{ marginBottom: '0.5rem' }}>
-              Pilihan Warna & Tampilan 3D
-            </h2>
-            <p style={{ color: '#6b7280', fontSize: '0.95rem' }}>
-              Geser gambar atau klik tombol untuk melihat tampilan Depan, Samping, dan Belakang
-            </p>
+      {/* ── Cover Image Section ── */}
+      {car.coverImage && (
+        <section className="car-cover-section">
+          <div className="container">
+            <img src={car.coverImage} alt={`Cover ${car.name}`} className="car-cover-img animate-fade-in-up" />
           </div>
-          <Car3DViewer
-            car={car}
-            selectedColor={selectedColor}
-            onColorChange={setSelectedColor}
-          />
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ── Quick Stats Bar ── */}
       <div className="car-stats-bar">
@@ -502,6 +492,25 @@ export default function CarDetailPage({ car, onBack }) {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── 3D Color Viewer Section ── */}
+      <section className="car-colors-section" style={{ background: '#f5f7fa' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            <h2 className="section-title color-title" style={{ marginBottom: '0.5rem' }}>
+              Pilihan Warna & Tampilan 3D
+            </h2>
+            <p style={{ color: '#6b7280', fontSize: '0.95rem' }}>
+              Geser gambar atau klik tombol untuk melihat tampilan Depan, Samping, dan Belakang
+            </p>
+          </div>
+          <Car3DViewer
+            car={car}
+            selectedColor={selectedColor}
+            onColorChange={setSelectedColor}
+          />
         </div>
       </section>
 

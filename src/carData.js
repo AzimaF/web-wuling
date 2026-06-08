@@ -29,8 +29,9 @@ export const carData = {
       { name: 'Peach Pink', hex: '#F4A9A8', cssFilter: 'none', image: './images/wuling/NewAIREV-Peach_Pink.png' },
     ],
     variants: [
-      { name: 'Air EV Lite 300', price: 'Rp 251.000.000', specs: { range: '300 km', power: '30 kW', torque: '110 N.m', battery: '17.3 kWh', acceleration: '14.5 dtk' } },
-      { name: 'Air EV Pro', price: 'Rp 307.500.000', specs: { range: '300 km', power: '30 kW', torque: '110 N.m', battery: '26.7 kWh', acceleration: '14.5 dtk' } },
+      { name: 'Air EV Lite 200', price: 'Rp 229.000.000', specs: { range: '200 km (CLTC)', power: '30 kW', torque: '110 N.m', battery: '17.3 kWh', acceleration: '—' } },
+      { name: 'Air EV Lite 300', price: 'Rp 251.000.000', specs: { range: '300 km (CLTC)', power: '30 kW', torque: '110 N.m', battery: '17.3 kWh', acceleration: '—' } },
+      { name: 'Air EV Pro', price: 'Rp 307.500.000', specs: { range: '300 km (CLTC)', power: '30 kW', torque: '110 N.m', battery: '26.7 kWh', acceleration: '—' } },
     ],
     fullSpecs: {
       Dimensi: {
@@ -81,8 +82,8 @@ export const carData = {
       { name: 'Milk Tea', hex: '#C9A882', cssFilter: 'none', image: './images/wuling/NewBINGUOEV-Milk_Tea.png' },
     ],
     variants: [
-      { name: 'Binguo Lite', price: 'Rp 318.000.000', specs: { range: '333 km', power: '50 kW', torque: '150 N.m', battery: '31.9 kWh', acceleration: '11.0 dtk' } },
-      { name: 'Binguo Pro', price: 'Rp 363.000.000', specs: { range: '333 km', power: '50 kW', torque: '150 N.m', battery: '31.9 kWh', acceleration: '11.0 dtk' } },
+      { name: 'Binguo Lite', price: 'Rp 318.000.000', specs: { range: '333 km (CLTC)', power: '50 kW (68 HP)', torque: '150 N.m', battery: '31.9 kWh', acceleration: '—' } },
+      { name: 'Binguo Pro', price: 'Rp 363.000.000', specs: { range: '333 km (CLTC)', power: '50 kW (68 HP)', torque: '150 N.m', battery: '31.9 kWh', acceleration: '—' } },
     ],
     fullSpecs: {
       Dimensi: {
@@ -133,8 +134,8 @@ export const carData = {
       { name: 'Tungsten Grey', hex: '#6B6B6B', cssFilter: 'none', image: './images/wuling/NewCLOUDEV-Tungsten_Grey.png' },
     ],
     variants: [
-      { name: 'Cloud Lite', price: 'Rp 415.000.000', specs: { range: '460 km', power: '100 kW', torque: '180 N.m', battery: '50.6 kWh', acceleration: '7.5 dtk' } },
-      { name: 'Cloud Pro', price: 'Rp 443.000.000', specs: { range: '460 km', power: '100 kW', torque: '180 N.m', battery: '50.6 kWh', acceleration: '7.5 dtk' } },
+      { name: 'Cloud Lite', price: 'Rp 415.000.000', specs: { range: '460 km (CLTC)', power: '100 kW (134 HP)', torque: '200 N.m', battery: '50.6 kWh', acceleration: '—' } },
+      { name: 'Cloud Pro', price: 'Rp 443.000.000', specs: { range: '460 km (CLTC)', power: '100 kW (134 HP)', torque: '200 N.m', battery: '50.6 kWh', acceleration: '—' } },
     ],
     fullSpecs: {
       Dimensi: {
@@ -184,31 +185,28 @@ export const carData = {
       { name: 'Orchid Purple', hex: '#7B5EA7', cssFilter: 'none', image: './images/wuling/Darion-Orchid_Purple.png' },
     ],
     variants: [
-      { name: 'Darion EV CE', price: 'Rp 399.000.000', specs: { range: '500 km', power: '130 kW', torque: '250 N.m', battery: '68.8 kWh', acceleration: '8.0 dtk' } },
-      { name: 'Darion EV EX', price: 'Rp 459.000.000', specs: { range: '500 km', power: '130 kW', torque: '250 N.m', battery: '68.8 kWh', acceleration: '8.0 dtk' } },
+      { name: 'Darion EV CE', price: 'Rp 399.000.000', specs: { range: '540 km (CLTC)', power: '150 kW (201 HP)', torque: '310 N.m', battery: '—', acceleration: '—' } },
+      { name: 'Darion EV EX', price: 'Rp 459.000.000', specs: { range: '540 km (CLTC)', power: '150 kW (201 HP)', torque: '310 N.m', battery: '—', acceleration: '—' } },
     ],
     fullSpecs: {
-      Dimensi: {
-        Panjang: '4.780 mm',
-        Lebar: '1.895 mm',
-        Tinggi: '1.770 mm',
-        Wheelbase: '2.800 mm',
-        'Berat Kosong': '2.105 kg',
+      'Dimensi & Sasis': {
+        'P x L x T (mm)': '4.910 x 1.870 x 1.770',
+        'Wheelbase (mm)': '2.910',
+        'Kapasitas Tempat Duduk': '7',
+        'Suspensi': 'McPherson (front) + Multi-link independent (rear)',
+        'Velg & Ban': '17" machined alloy wheel, 215/55 R17',
+        'Rem': 'Disc (front) & Disc (rear)',
+        'Steering': 'Electric Power Steering',
       },
-      Powertrain: {
-        Motor: 'Permanent Magnet Synchronous Motor',
-        Transmisi: 'Single-speed Automatic',
-        Penggerak: 'FWD',
-      },
-      'Wheel & Brake': {
-        'Ukuran Velg': '18 inch',
-        'Rem Depan': 'Ventilated Disc',
-        'Rem Belakang': 'Disc',
-      },
-      Kapasitas: {
-        Penumpang: '7 orang',
-        'Volume Bagasi': '200 L (baris 3 terlipat: 700 L)',
-      },
+      'Powertrain': {
+        'Tenaga Maksimum Motor': '150 kW (201 hp)',
+        'Torsi Maksimum Motor': '310 Nm',
+        'Transmisi': 'Single reduction',
+        'Kapasitas Baterai': '69.2 kWh',
+        'Jangkauan All-electric (CLTC)': '540 km',
+        'Tipe Baterai': 'Lithium Iron Phosphate',
+        'Drive layout': 'Front Wheel Drive',
+      }
     },
   },
 
@@ -225,44 +223,41 @@ export const carData = {
       'Kabin 7-seater mewah dengan konfigurasi fleksibel',
       'Pengisian listrik dan BBM untuk fleksibilitas maksimal',
     ],
-    heroImage: './images/wuling/Darion_White.png',
+    heroImage: './images/wuling/DarionPHEV_White.png',
     coverImage: './images/Cover-Wuling/Cover-Darion.png',
-    colorImage: './images/wuling/Darion_White.png',
+    colorImage: './images/wuling/DarionPHEV_White.png',
     colors: [
-      { name: 'White', hex: '#F5F5F5', cssFilter: 'none', image: './images/wuling/Darion_White.png' },
-      { name: 'Stary Black', hex: '#1A1A1A', cssFilter: 'none', image: './images/wuling/Darion-Stary_Black.png' },
-      { name: 'Haze Grey', hex: '#8F8F8F', cssFilter: 'none', image: './images/wuling/Darion-Haze_Grey.png' },
-      { name: 'Orchid Purple', hex: '#7B5EA7', cssFilter: 'none', image: './images/wuling/Darion-Orchid_Purple.png' },
+      { name: 'White', hex: '#F5F5F5', cssFilter: 'none', image: './images/wuling/DarionPHEV_White.png' },
+      { name: 'Stary Black', hex: '#1A1A1A', cssFilter: 'none', image: './images/wuling/DarionPHEV-Stary_Black.png' },
+      { name: 'Haze Grey', hex: '#8F8F8F', cssFilter: 'none', image: './images/wuling/DarionPHEV-Haze_Grey.png' },
+      { name: 'Orchid Purple', hex: '#7B5EA7', cssFilter: 'none', image: './images/wuling/DarionPHEV-Orchid_Purple.png' },
     ],
     variants: [
-      { name: 'Darion PHEV CE', price: 'Rp 449.000.000', specs: { range: '1.000+ km', power: '195 kW', torque: '350 N.m', battery: '27.2 kWh', acceleration: '6.5 dtk' } },
-      { name: 'Darion PHEV EX', price: 'Rp 499.000.000', specs: { range: '1.000+ km', power: '195 kW', torque: '350 N.m', battery: '27.2 kWh', acceleration: '6.5 dtk' } },
+      { name: 'Darion PHEV CE', price: 'Rp 449.000.000', specs: { range: '1.000+ km', power: '145 kW (195 HP)', torque: '230 N.m', battery: '20.5 kWh (PHEV)', acceleration: '—' } },
+      { name: 'Darion PHEV EX', price: 'Rp 499.000.000', specs: { range: '1.000+ km', power: '145 kW (195 HP)', torque: '230 N.m', battery: '20.5 kWh (PHEV)', acceleration: '—' } },
     ],
     fullSpecs: {
-      Dimensi: {
-        Panjang: '4.780 mm',
-        Lebar: '1.895 mm',
-        Tinggi: '1.770 mm',
-        Wheelbase: '2.800 mm',
-        'Berat Kosong': '2.230 kg',
+      'Dimensi & Sasis': {
+        'P x L x T (mm)': '4.910 x 1.870 x 1.770',
+        'Wheelbase (mm)': '2.910',
+        'Kapasitas Tempat Duduk': '7',
+        'Suspensi': 'McPherson (front) + Multi-link independent (rear)',
+        'Velg & Ban': '17" machined alloy wheel, 215/55 R17',
+        'Rem': 'Disc (front) & Disc (rear)',
+        'Steering': 'Electric Power Steering',
       },
-      Powertrain: {
-        'Tipe Mesin': '1.5L Turbocharged + Motor Listrik (PHEV)',
-        'Daya Total Sistem': '195 kW',
-        'Torsi Total': '350 N.m',
-        Transmisi: 'e-CVT',
-        Penggerak: 'FWD',
-      },
-      'Wheel & Brake': {
-        'Ukuran Velg': '18 inch',
-        'Rem Depan': 'Ventilated Disc',
-        'Rem Belakang': 'Disc',
-      },
-      Kapasitas: {
-        Penumpang: '7 orang',
-        'Volume Bagasi': '200 L (baris 3 terlipat: 700 L)',
-        'Baterai Listrik': '27.2 kWh (PHEV)',
-      },
+      'Powertrain': {
+        'Mesin Hybrid Khusus': 'Gasoline, 1498cc, naturally aspirated, Atkinson cycle',
+        'Tenaga Maks. Mesin': '105 hp @5,800 rpm',
+        'Torsi Maks. Mesin': '130 Nm @4,600~5,000 rpm',
+        'Kapasitas Tangki BBM': '52 L',
+        'Tenaga / Torsi Maks. Motor': '145 kW (195 hp) / 230 Nm',
+        'Transmisi': 'Dedicated Hybrid Transmission',
+        'Kapasitas Baterai': '20.5 kWh',
+        'Jangkauan All-electric (CLTC)': '125 km',
+        'Tipe Baterai': 'Lithium Iron Phosphate',
+        'Drive layout': 'Front Wheel Drive',
+      }
     },
   },
 
@@ -289,31 +284,28 @@ export const carData = {
       { name: 'Archipelago Blue', hex: '#2E5FA3', cssFilter: 'none', image: './images/wuling/Eksion-Archipelago_Blue.png' },
     ],
     variants: [
-      { name: 'Eksion EV CE', price: 'Rp 389.000.000', specs: { range: '475 km', power: '160 kW', torque: '320 N.m', battery: '70 kWh', acceleration: '6.5 dtk' } },
-      { name: 'Eksion EV EX', price: 'Rp 459.000.000', specs: { range: '475 km', power: '160 kW', torque: '320 N.m', battery: '70 kWh', acceleration: '6.5 dtk' } },
+      { name: 'Eksion EV CE', price: 'Rp 389.000.000', specs: { range: '530 km (CLTC)', power: '145 kW (195 HP)', torque: '230 N.m', battery: '69.2 kWh', acceleration: '—' } },
+      { name: 'Eksion EV EX', price: 'Rp 459.000.000', specs: { range: '530 km (CLTC)', power: '145 kW (195 HP)', torque: '230 N.m', battery: '69.2 kWh', acceleration: '—' } },
     ],
     fullSpecs: {
-      Dimensi: {
-        Panjang: '4.785 mm',
-        Lebar: '1.930 mm',
-        Tinggi: '1.675 mm',
-        Wheelbase: '2.850 mm',
-        'Berat Kosong': '2.100 kg',
+      'Dimensi & Sasis': {
+        'P x L x T (mm)': '4.745 x 1.850 x 1.755',
+        'Wheelbase (mm)': '2.810',
+        'Kapasitas Tempat Duduk': '7',
+        'Suspensi': 'McPherson (front) + Multi-link independent (rear)',
+        'Velg & Ban': '18" machined alloy wheel, 215/55 R18',
+        'Rem': 'Disc (front) & Disc (rear)',
+        'Steering': 'Rack & Pinion ; Electric Power Steering',
       },
-      Powertrain: {
-        Motor: 'Permanent Magnet Synchronous Motor',
-        Transmisi: 'Single-speed Automatic',
-        Penggerak: 'FWD / AWD',
-      },
-      'Wheel & Brake': {
-        'Ukuran Velg': '19 inch',
-        'Rem Depan': 'Ventilated Disc',
-        'Rem Belakang': 'Ventilated Disc',
-      },
-      Kapasitas: {
-        Penumpang: '5 orang',
-        'Volume Bagasi': '590 L',
-      },
+      'Powertrain': {
+        'Tenaga Maksimum Motor': '150 kW (201 hp)',
+        'Torsi Maksimum Motor': '310 Nm',
+        'Transmisi': 'Single reduction',
+        'Kapasitas Baterai': '69.2 kWh',
+        'Jangkauan All-electric (CLTC)': '530 km',
+        'Tipe Baterai': 'Lithium Iron Phosphate',
+        'Drive layout': 'Front Wheel Drive',
+      }
     },
   },
 
@@ -330,44 +322,42 @@ export const carData = {
       'Performa luar biasa dengan akselerasi 0–100 km/h yang mengesankan',
       'SUV premium untuk segala medan dan petualangan',
     ],
-    heroImage: './images/wuling/Eksion-White.png',
+    heroImage: './images/wuling/EksionPHEV-White.png',
     coverImage: './images/Cover-Wuling/Cover-Eksion.png',
-    colorImage: './images/wuling/Eksion-White.png',
+    colorImage: './images/wuling/EksionPHEV-White.png',
     colors: [
-      { name: 'White', hex: '#F5F5F5', cssFilter: 'none', image: './images/wuling/Eksion-White.png' },
-      { name: 'Stary Black', hex: '#1A1A1A', cssFilter: 'none', image: './images/wuling/Eksion-Stary_Black.png' },
-      { name: 'Haze Grey', hex: '#8F8F8F', cssFilter: 'none', image: './images/wuling/Eksion-Haze_Grey.png' },
-      { name: 'Archipelago Blue', hex: '#2E5FA3', cssFilter: 'none', image: './images/wuling/Eksion-Archipelago_Blue.png' },
+      { name: 'White', hex: '#F5F5F5', cssFilter: 'none', image: './images/wuling/EksionPHEV-White.png' },
+      { name: 'Stary Black', hex: '#1A1A1A', cssFilter: 'none', image: './images/wuling/EksionPHEV-Stary_Black.png' },
+      { name: 'Haze Grey', hex: '#8F8F8F', cssFilter: 'none', image: './images/wuling/EksionPHEV-Haze_Grey.png' },
+      { name: 'Archipelago Blue', hex: '#2E5FA3', cssFilter: 'none', image: './images/wuling/EksionPHEV-Archipelago_Blue.png' },
     ],
     variants: [
-      { name: 'Eksion PHEV CE', price: 'Rp 449.000.000', specs: { range: '1.000+ km', power: '240 kW', torque: '460 N.m', battery: '25.8 kWh', acceleration: '5.5 dtk' } },
-      { name: 'Eksion PHEV EX', price: 'Rp 499.000.000', specs: { range: '1.000+ km', power: '240 kW', torque: '460 N.m', battery: '25.8 kWh', acceleration: '5.5 dtk' } },
+      { name: 'Eksion PHEV CE', price: 'Rp 449.000.000', specs: { range: '1.000+ km', power: '150 kW (201 HP)', torque: '310 N.m', battery: '20.5 kWh (PHEV)', acceleration: '—' } },
+      { name: 'Eksion PHEV EX', price: 'Rp 499.000.000', specs: { range: '1.000+ km', power: '150 kW (201 HP)', torque: '310 N.m', battery: '20.5 kWh (PHEV)', acceleration: '—' } },
     ],
     fullSpecs: {
-      Dimensi: {
-        Panjang: '4.785 mm',
-        Lebar: '1.930 mm',
-        Tinggi: '1.675 mm',
-        Wheelbase: '2.850 mm',
-        'Berat Kosong': '2.280 kg',
+      'Dimensi & Sasis': {
+        'P x L x T (mm)': '4.745 x 1.850 x 1.755',
+        'Wheelbase (mm)': '2.810',
+        'Kapasitas Tempat Duduk': '7',
+        'Suspensi': 'McPherson (front) + Multi-link independent (rear)',
+        'Velg & Ban': '18" machined alloy wheel, 215/55 R18',
+        'Rem': 'Disc (front) & Disc (rear)',
+        'Steering': 'Rack & Pinion ; Electric Power Steering',
       },
-      Powertrain: {
-        'Tipe Mesin': '1.5L Turbocharged + Motor Listrik (PHEV)',
-        'Daya Total Sistem': '240 kW (326 HP)',
-        'Torsi Total': '460 N.m',
-        Transmisi: 'e-CVT',
-        Penggerak: 'AWD',
-      },
-      'Wheel & Brake': {
-        'Ukuran Velg': '19 inch',
-        'Rem Depan': 'Ventilated Disc',
-        'Rem Belakang': 'Ventilated Disc',
-      },
-      Kapasitas: {
-        Penumpang: '5 orang',
-        'Volume Bagasi': '590 L',
-        'Baterai Listrik': '25.8 kWh (PHEV)',
-      },
+      'Powertrain': {
+        'Mesin Hybrid Khusus': 'Gasoline, 1498cc, naturally aspirated, Atkinson cycle',
+        'Tenaga Maks. Mesin': '105 hp @5,800 rpm',
+        'Torsi Maks. Mesin': '130 Nm @4,600~5,000 rpm',
+        'Kapasitas Tangki BBM': '52 L',
+        'Tenaga / Torsi Maks. Motor': '145 kW (195 hp) / 230 Nm',
+        'Transmisi': 'Dedicated Hybrid Transmission',
+        'Kapasitas Baterai': '20.5 kWh',
+        'Jangkauan All-electric (CLTC)': '125 km',
+        'Jangkauan Kombinasi Total': '1.000+ km',
+        'Tipe Baterai': 'Lithium Iron Phosphate',
+        'Drive layout': 'Front Wheel Drive',
+      }
     },
   },
 
@@ -392,10 +382,10 @@ export const carData = {
       { name: 'Grey New', hex: '#8F8F8F', cssFilter: 'none', image: './images/wuling/MitraEV-Grey_New.png' },
     ],
     variants: [
-      { name: 'Mitra EV BV 300', price: 'Rp 328.000.000', specs: { range: '300 km', power: '60 kW', torque: '200 N.m', battery: '43.9 kWh', acceleration: '—' } },
-      { name: 'Mitra EV BV 400', price: 'Rp 358.000.000', specs: { range: '400 km', power: '60 kW', torque: '200 N.m', battery: '57.5 kWh', acceleration: '—' } },
-      { name: 'Mitra EV MB 300', price: 'Rp 348.000.000', specs: { range: '300 km', power: '60 kW', torque: '200 N.m', battery: '43.9 kWh', acceleration: '—' } },
-      { name: 'Mitra EV MB 400', price: 'Rp 378.000.000', specs: { range: '400 km', power: '60 kW', torque: '200 N.m', battery: '57.5 kWh', acceleration: '—' } },
+      { name: 'Mitra EV BV 300', price: 'Rp 328.000.000', specs: { range: '300 km (CLTC)', power: '75 kW (101 HP)', torque: '180 N.m', battery: '41.9 kWh', acceleration: '—' } },
+      { name: 'Mitra EV BV 400', price: 'Rp 358.000.000', specs: { range: '400 km (CLTC)', power: '75 kW (101 HP)', torque: '180 N.m', battery: '56.2 kWh', acceleration: '—' } },
+      { name: 'Mitra EV MB 300', price: 'Rp 348.000.000', specs: { range: '300 km (CLTC)', power: '75 kW (101 HP)', torque: '180 N.m', battery: '41.9 kWh', acceleration: '—' } },
+      { name: 'Mitra EV MB 400', price: 'Rp 378.000.000', specs: { range: '400 km (CLTC)', power: '75 kW (101 HP)', torque: '180 N.m', battery: '56.2 kWh', acceleration: '—' } },
     ],
     fullSpecs: {
       Dimensi: {
@@ -524,6 +514,63 @@ export const carData = {
       Kapasitas: {
         Penumpang: '5 orang',
         'Volume Bagasi': '435 L',
+      },
+    },
+  },
+
+  'wuling-formo-max': {
+    id: 'wuling-formo-max',
+    name: 'Formo MAX',
+    tagline: 'Pikap Niaga Bertenaga',
+    slogan: 'Enteng Angkut, Untung Berlipat',
+    description:
+      'Wuling Formo MAX adalah pikap ringan bermesin depan yang dirancang khusus untuk kebutuhan bisnis Anda. Dengan bak kargo yang luas, mesin bertenaga, Electric Power Steering, dan fitur keselamatan ABS+EBD, Formo MAX hadir sebagai solusi angkutan bisnis yang handal, irit, dan mudah perawatannya.',
+    highlights: [
+      'Mesin depan untuk kenyamanan supir maksimal',
+      'Bak kargo luas dengan bukaan 3 sisi untuk kemudahan bongkar muat',
+      'Electric Power Steering (EPS) untuk manuver mudah',
+      'ABS + EBD untuk keamanan pengereman di segala kondisi',
+    ],
+    heroImage: './images/wuling/FormoMAX-White.png',
+    coverImage: './images/Cover-Wuling/Cover-FormoMAX.png',
+    colorImage: './images/wuling/FormoMAX-White.png',
+    colors: [
+      { name: 'White', hex: '#F5F5F5', cssFilter: 'none', image: './images/wuling/FormoMAX-White.png' },
+      { name: 'Silver', hex: '#C0C0C0', cssFilter: 'none', image: './images/wuling/FormoMAX-Silver.png' },
+      { name: 'Black', hex: '#1A1A1A', cssFilter: 'none', image: './images/wuling/FormoMAX-Black.png' },
+    ],
+    variants: [
+      { name: 'Formo MAX Standard', price: 'Rp 209.800.000', specs: { range: '—', power: '98 HP', torque: '140 N.m', battery: '—', acceleration: '—' } },
+      { name: 'Formo MAX AC', price: 'Rp 229.800.000', specs: { range: '—', power: '98 HP', torque: '140 N.m', battery: '—', acceleration: '—' } },
+    ],
+    fullSpecs: {
+      Dimensi: {
+        Panjang: '5.135 mm',
+        Lebar: '1.725 mm',
+        Tinggi: '1.740 mm',
+        Wheelbase: '3.160 mm',
+        'Panjang Bak': '2.695 mm',
+        'Lebar Bak': '1.725 mm',
+        'Tinggi Bak': '390 mm',
+      },
+      Powertrain: {
+        'Tipe Mesin': '4 Silinder, Segaris, DOHC, 1.485cc',
+        'Daya Mesin': '98 HP @ 5.800 rpm',
+        'Torsi Mesin': '140 N.m @ 3.400-4.400 rpm',
+        Transmisi: 'Manual, 5 Percepatan',
+        'Sistem Bahan Bakar': 'Injeksi Multipoin',
+      },
+      'Wheel & Brake': {
+        'Ukuran Ban': '175/75 R14C',
+        'Rem Depan': 'Disc',
+        'Rem Belakang': 'Drum',
+        'Suspensi Depan': 'McPherson Strut',
+        'Suspensi Belakang': 'Leaf Spring',
+      },
+      Kapasitas: {
+        Penumpang: '2 orang',
+        'Tangki BBM': '42 L',
+        'Kapasitas Muatan': '1.000 kg',
       },
     },
   },

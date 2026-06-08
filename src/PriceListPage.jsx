@@ -3,10 +3,10 @@ import { Phone, ChevronRight, Zap, Gauge, Battery, Timer, Tag } from 'lucide-rea
 import { carData } from './carData';
 
 const priceListData = Object.values(carData).map(car => {
-  let category = 'Hatchback';
+  let category = 'Commercial';
   if (car.id.includes('binguo') || car.id.includes('air') || car.id.includes('cloud')) {
     category = 'EV';
-  } else if (car.id.includes('mitra')) {
+  } else if (car.id.includes('mitra') || car.id.includes('formo')) {
     category = 'Commercial';
   } else if (car.id.includes('almaz') || car.id.includes('alvez')) {
     category = 'SUV';
@@ -70,7 +70,7 @@ function PriceCard({ car, onViewDetail }) {
         {/* Price */}
         <div className="pl-price-block">
           <p className="pl-price">{v.price}</p>
-          <p className="pl-price-label">OTR Jakarta / Tangerang Selatan</p>
+          <p className="pl-price-label">OTR Jakarta</p>
           <p className="pl-price-date">Harga per Juni 2026</p>
         </div>
 

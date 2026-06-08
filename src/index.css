@@ -1425,23 +1425,23 @@ footer {
 
 .pl-card-img-wrap {
   background: linear-gradient(135deg, #f8f9fa 0%, #eef0f3 100%);
-  height: 260px;
+  height: 320px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
+  position: relative;
 }
 
 .pl-card-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
+  padding: 8px 4px;
+  transform: scale(1.12);
   transition: transform 0.5s ease;
 }
 
 .pl-card:hover .pl-card-img {
-  transform: scale(1.04);
+  transform: scale(1.18);
 }
 
 .pl-card-body {
