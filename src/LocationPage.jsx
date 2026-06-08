@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import {
   MapPin,
   Phone,
@@ -24,10 +24,10 @@ const serviceAreas = [
 ];
 
 const highlights = [
-  { icon: <Star size={18} />, label: 'Rating Google', value: '4.8 ★  (87 ulasan)' },
+  { icon: <Star size={18} />, label: 'Rating Google', value: '4.8 â˜…  (87 ulasan)' },
   { icon: <Car size={18} />, label: 'Test Drive', value: 'Gratis & Tanpa Booking' },
   { icon: <Users size={18} />, label: 'Sales Expert', value: 'Siap Membantu Anda' },
-  { icon: <Clock size={18} />, label: 'Jam Buka', value: 'Senin – Minggu' },
+  { icon: <Clock size={18} />, label: 'Jam Buka', value: 'Senin â€“ Minggu' },
 ];
 
 export default function LocationPage() {
@@ -53,7 +53,7 @@ export default function LocationPage() {
   return (
     <div className="loc-page">
 
-      {/* ── Hero ─────────────────────────────────────── */}
+      {/* â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div className="loc-hero">
         <div className="loc-hero-glow" />
         <div className="container loc-hero-inner">
@@ -65,7 +65,7 @@ export default function LocationPage() {
               Kunjungi<br />Showroom Kami
             </h1>
             <p className="loc-hero-subtitle">
-              <strong>Wuling Mimosa BSD</strong> — dealer resmi Wuling di BSD,
+              <strong>Wuling Mimosa BSD</strong> â€” dealer resmi Wuling di BSD,
               Tangerang Selatan. Kami melayani test drive gratis, konsultasi,
               dan pembelian untuk wilayah BSD, Serpong, Tangerang, Banten, dan Jakarta.
             </p>
@@ -79,7 +79,7 @@ export default function LocationPage() {
                 <Navigation size={18} /> Petunjuk Arah
               </a>
               <a
-                href="https://wa.me/6288214786250"
+                href="https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20Wuling"
                 target="_blank"
                 rel="noreferrer"
                 className="btn-outline"
@@ -89,7 +89,7 @@ export default function LocationPage() {
             </div>
           </div>
 
-          {/* ── Highlight badges ── */}
+          {/* â”€â”€ Highlight badges â”€â”€ */}
           <div className="loc-highlights-grid">
             {highlights.map((h, i) => (
               <div key={i} className="loc-highlight-card">
@@ -104,11 +104,11 @@ export default function LocationPage() {
         </div>
       </div>
 
-      {/* ── Main Content: Map + Info ──────────────────── */}
+      {/* â”€â”€ Main Content: Map + Info â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div className="loc-main">
         <div className="container loc-main-inner">
 
-          {/* LEFT — Map embed */}
+          {/* LEFT â€” Map embed */}
           <div className="loc-map-wrap">
             <iframe
               title="Wuling BSD MIMOSA Location"
@@ -120,7 +120,7 @@ export default function LocationPage() {
             />
           </div>
 
-          {/* RIGHT — Contact info */}
+          {/* RIGHT â€” Contact info */}
           <div className="loc-info-panel">
 
             {/* Address card */}
@@ -156,8 +156,8 @@ export default function LocationPage() {
               <div className="loc-info-card-body">
                 <div className="loc-hours-table">
                   <div className="loc-hours-row">
-                    <span className="loc-hours-day">Senin – Minggu</span>
-                    <span className="loc-hours-time loc-hours-open">08.00 – 20.00 WIB</span>
+                    <span className="loc-hours-day">Senin â€“ Minggu</span>
+                    <span className="loc-hours-time loc-hours-open">08.00 â€“ 20.00 WIB</span>
                   </div>
                 </div>
                 <div 
@@ -195,7 +195,7 @@ export default function LocationPage() {
                   </div>
                 </div>
                 <a
-                  href="https://wa.me/6288214786250?text=Halo%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20tentang%20Wuling%20Mimosa%20BSD"
+                  href="https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20tentang%20Wuling%20Mimosa%20BSD"
                   target="_blank"
                   rel="noreferrer"
                   className="loc-wa-btn"
@@ -212,7 +212,7 @@ export default function LocationPage() {
 
 
 
-      {/* ── Bottom CTA ───────────────────────────────── */}
+      {/* â”€â”€ Bottom CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div className="loc-cta-section">
         <div className="container loc-cta-inner">
           <div>
@@ -223,7 +223,7 @@ export default function LocationPage() {
           </div>
           <div className="loc-cta-buttons">
             <a
-              href="https://wa.me/6288214786250?text=Halo%2C%20saya%20ingin%20jadwalkan%20test%20drive%20gratis"
+              href="https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20jadwalkan%20test%20drive%20gratis"
               target="_blank"
               rel="noreferrer"
               className="btn-primary"
@@ -247,3 +247,4 @@ export default function LocationPage() {
     </div>
   );
 }
+

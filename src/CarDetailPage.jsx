@@ -362,7 +362,7 @@ export default function CarDetailPage({ car, onBack }) {
             </div>
             <div className="car-hero-cta">
               <a
-                href="https://wa.me/6288214786250"
+                href={`https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20Wuling%20${encodeURIComponent(car.name)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="btn-primary"
@@ -542,7 +542,7 @@ export default function CarDetailPage({ car, onBack }) {
           </div>
           <div className="car-cta-buttons">
             <a
-              href="https://wa.me/6288214786250"
+              href={`https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20Wuling%20${encodeURIComponent(car.name)}%20varian%20${encodeURIComponent(variant.name)}`}
               target="_blank"
               rel="noreferrer"
               className="btn-primary"
@@ -551,7 +551,7 @@ export default function CarDetailPage({ car, onBack }) {
               <Phone size={20} /> Hubungi Sales Sekarang
             </a>
             <a
-              href={`https://wa.me/6288214786250?text=Halo%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(car.name)}%20varian%20${encodeURIComponent(variant.name)}%20(${encodeURIComponent(variant.price)}).%20Boleh%20minta%20info%20lebih%20lanjut%3F`}
+              href={`https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(car.name)}%20varian%20${encodeURIComponent(variant.name)}%20(${encodeURIComponent(variant.price)}).%20Boleh%20minta%20info%20lebih%20lanjut%3F`}
               target="_blank"
               rel="noreferrer"
               className="btn-outline"

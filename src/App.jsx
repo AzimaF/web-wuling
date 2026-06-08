@@ -14,7 +14,7 @@ import {
 import './index.css';
 import { carData } from './carData';
 
-// Lazy-load pages for code splitting — reduces initial JS bundle by ~40-50%
+// Lazy-load pages for code splitting â€” reduces initial JS bundle by ~40-50%
 const CarDetailPage = React.lazy(() => import('./CarDetailPage'));
 const PriceListPage = React.lazy(() => import('./PriceListPage'));
 const LocationPage = React.lazy(() => import('./LocationPage'));
@@ -273,7 +273,7 @@ function App() {
 
         {/* Nav Links */}
         <nav className="mob-sidebar-nav">
-          {/* Cars — expandable */}
+          {/* Cars â€” expandable */}
           <div className="mob-nav-section">
             <span className="mob-nav-heading">Cars</span>
             <div className="mob-nav-sub">
@@ -318,7 +318,7 @@ function App() {
               <source media="(max-width: 768px)" srcSet="./images/Cover-Website-Mobile/Halaman1-Mobile.png" />
               <img
                 src="./images/CoverWebsite-Wuling/Halaman_1.png"
-                alt="Wuling Mimosa BSD — Dealer Resmi Wuling di BSD, Tangerang Selatan"
+                alt="Wuling Mimosa BSD â€” Dealer Resmi Wuling di BSD, Tangerang Selatan"
                 className="hero-bg"
                 fetchpriority="high"
                 decoding="async"
@@ -345,7 +345,7 @@ function App() {
                   Wuling Mimosa BSD
                 </h1>
                 <div className="hero-actions" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '1.5rem' }}>
-                  <a href="https://wa.me/6288214786250?text=Halo%20saya%20tertarik%20konsultasi%20mengenai%20mobil%20Wuling" target="_blank" rel="noreferrer" className="btn-primary" aria-label="Hubungi sales Wuling melalui WhatsApp">
+                  <a href="https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20Wuling" target="_blank" rel="noreferrer" className="btn-primary" aria-label="Hubungi sales Wuling melalui WhatsApp">
                     <Phone size={20} aria-hidden="true" /> Hubungi Sales
                   </a>
                   <button 
@@ -450,7 +450,7 @@ function App() {
               </div>
 
               <div className="text-center" style={{ marginTop: '3rem' }}>
-                <a href="https://wa.me/6288214786250" target="_blank" rel="noreferrer" className="btn-primary">
+                <a href="https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20Wuling" target="_blank" rel="noreferrer" className="btn-primary">
                   Konsultasi Gratis <ChevronRight size={18} />
                 </a>
               </div>
@@ -487,7 +487,7 @@ function App() {
                     <Phone size={24} style={{ color: 'var(--accent-color)', flexShrink: 0 }} />
                     <div>
                       <h4 style={{ marginBottom: '0.2rem', fontSize: '1.1rem' }}>WhatsApp:</h4>
-                      <a href="https://wa.me/6288214786250" className="feature-desc" style={{ textDecoration: 'underline' }}>0882-1478-6250</a>
+                      <a href="https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20Wuling" className="feature-desc" style={{ textDecoration: 'underline' }}>0882-1478-6250</a>
                     </div>
                   </div>
 
@@ -502,7 +502,7 @@ function App() {
 
                 {/* Right Column - Action Buttons */}
                 <div style={{ flex: '1', minWidth: '300px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                  <a href="https://wa.me/6288214786250" className="glass-card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '2rem', textDecoration: 'none', background: 'rgba(30, 60, 120, 0.4)' }}>
+                  <a href="https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20Wuling" className="glass-card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '2rem', textDecoration: 'none', background: 'rgba(30, 60, 120, 0.4)' }}>
                     <div>
                       <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', color: 'white' }}>Jadwal Test Drive</h3>
                       <p className="feature-desc">Rasakan pengalaman berkendara Wuling langsung</p>
@@ -596,7 +596,7 @@ function App() {
               <h3 style={{ color: '#1f2937', fontSize: '1.2rem', marginBottom: '1rem', fontFamily: 'Inter, sans-serif' }}>Contact Us</h3>
               <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>Sales: Rafi Wuling Mimosa BSD</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                <a href="https://wa.me/6288214786250" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#4b5563', textDecoration: 'none', fontSize: '0.95rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#25D366'} onMouseLeave={(e) => e.currentTarget.style.color = '#4b5563'}>
+                <a href="https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20Wuling" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#4b5563', textDecoration: 'none', fontSize: '0.95rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#25D366'} onMouseLeave={(e) => e.currentTarget.style.color = '#4b5563'}>
                   <Phone size={18} />
                   <span>+62 882-1478-6250</span>
                 </a>
@@ -640,7 +640,7 @@ function App() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/6288214786250"
+        href="https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20Wuling"
         target="_blank"
         rel="noreferrer"
         className="floating-wa"
@@ -653,3 +653,4 @@ function App() {
 }
 
 export default App;
+

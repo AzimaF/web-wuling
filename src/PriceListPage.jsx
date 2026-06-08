@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Phone, ChevronRight, Zap, Gauge, Battery, Timer, Tag } from 'lucide-react';
 import { carData } from './carData';
 
@@ -30,7 +30,7 @@ const priceListData = Object.values(carData).map(car => {
 
 const CATEGORIES = ['Semua', 'EV', 'PHEV', 'SUV', 'Commercial'];
 
-// ── Single Car Price Card ──────────────────────────────────────────────────────
+// â”€â”€ Single Car Price Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function PriceCard({ car, onViewDetail }) {
   const [activeVariant, setActiveVariant] = useState(0);
   const v = car.variants[activeVariant];
@@ -117,7 +117,7 @@ function PriceCard({ car, onViewDetail }) {
   );
 }
 
-// ── Price List Page ────────────────────────────────────────────────────────────
+// â”€â”€ Price List Page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function PriceListPage({ onViewDetail }) {
   const [activeCategory, setActiveCategory] = useState('Semua');
 
@@ -129,7 +129,7 @@ export default function PriceListPage({ onViewDetail }) {
   return (
     <div className="pl-page">
 
-      {/* ── Hero Banner ── */}
+      {/* â”€â”€ Hero Banner â”€â”€ */}
       <div className="pl-hero">
         <div className="pl-hero-overlay" />
         <div className="container pl-hero-content">
@@ -143,7 +143,7 @@ export default function PriceListPage({ onViewDetail }) {
         </div>
       </div>
 
-      {/* ── Category Filter ── */}
+      {/* â”€â”€ Category Filter â”€â”€ */}
       <div className="pl-filter-bar">
         <div className="container pl-filter-inner">
           <span className="pl-filter-label">Filter:</span>
@@ -164,7 +164,7 @@ export default function PriceListPage({ onViewDetail }) {
         </div>
       </div>
 
-      {/* ── Cards Grid ── */}
+      {/* â”€â”€ Cards Grid â”€â”€ */}
       <div className="pl-content">
         <div className="container">
           <div className="pl-grid">
@@ -181,7 +181,7 @@ export default function PriceListPage({ onViewDetail }) {
         </div>
       </div>
 
-      {/* ── Bottom CTA ── */}
+      {/* â”€â”€ Bottom CTA â”€â”€ */}
       <div className="pl-bottom-cta">
         <div className="container pl-bottom-cta-inner">
           <div>
@@ -191,7 +191,7 @@ export default function PriceListPage({ onViewDetail }) {
             </p>
           </div>
           <a
-            href="https://wa.me/6288214786250"
+            href="https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20Wuling"
             target="_blank"
             rel="noreferrer"
             className="btn-primary"
@@ -204,3 +204,4 @@ export default function PriceListPage({ onViewDetail }) {
     </div>
   );
 }
+

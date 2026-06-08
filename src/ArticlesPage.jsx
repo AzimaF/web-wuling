@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { ArrowRight, ArrowLeft, Calendar, Tag, Search, BookOpen } from 'lucide-react';
 
-// ── Article Data ──────────────────────────────────────────────────────────────
+// â”€â”€ Article Data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const articles = [
   {
     id: 1,
@@ -19,7 +19,7 @@ const articles = [
       { type: 'paragraph', text: 'Kami menguji langsung varian Eksion EV EX di wilayah BSD City, Serpong Raya. Mengendarai SUV bertenaga 160 kW dengan akselerasi yang instan memberikan sensasi berkendara luar biasa yang menyenangkan dan meyakinkan.' },
       { type: 'list', items: [
         'Tenaga Maksimal: 160 kW (217 HP) dengan motor listrik PMSM',
-        'Akselerasi 0–100 km/jam: Dalam 6.5 detik yang mengesankan',
+        'Akselerasi 0â€“100 km/jam: Dalam 6.5 detik yang mengesankan',
         'Jarak Tempuh Maksimal: Hingga 475 km dalam sekali pengisian daya penuh',
         'Handling & Stabilitas: Sangat kokoh dengan sasis modern berteknologi terkini'
       ] },
@@ -79,7 +79,7 @@ const articles = [
     category: 'Test Drive',
     categoryColor: '#dc2626',
     date: 'April 5, 2025',
-    title: 'Test Drive Wuling Eksion PHEV: Akselerasi 0–100 km/h dalam 5,5 Detik yang Mengejutkan',
+    title: 'Test Drive Wuling Eksion PHEV: Akselerasi 0â€“100 km/h dalam 5,5 Detik yang Mengejutkan',
     excerpt:
       'Kami mencoba varian Eksion PHEV EX di jalan tol dan perkotaan. Torsi 460 Nm terasa nyata saat pedal gas ditekan penuh. Ini pengalaman berkendara paling mendebarkan dari Wuling.',
     image: './images/wuling/Eksion-Archipelago_Blue.png',
@@ -188,7 +188,7 @@ const articles = [
 
 const CATEGORIES = ['Semua', 'Review', 'Comparison', 'Test Drive', 'Tips', 'Panduan'];
 
-// ── Article Card Component ────────────────────────────────────────────────────
+// â”€â”€ Article Card Component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function ArticleCard({ article, featured = false, onSelect }) {
   return (
     <div 
@@ -230,7 +230,7 @@ function ArticleCard({ article, featured = false, onSelect }) {
   );
 }
 
-// ── Articles Page ─────────────────────────────────────────────────────────────
+// â”€â”€ Articles Page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function ArticlesPage() {
   const [activeCategory, setActiveCategory] = useState('Semua');
   const [searchQuery, setSearchQuery] = useState('');
@@ -410,7 +410,7 @@ export default function ArticlesPage() {
               Hubungi Tim Sales Wuling Mimosa BSD untuk simulasi cicilan, harga promo terbaru, dan jadwal test drive gratis.
             </p>
             <a
-              href={`https://wa.me/6288214786250?text=Halo%20saya%20tertarik%20dengan%20artikel%20"${encodeURIComponent(selectedArticle.title)}"%20dan%20ingin%20tanya-tanya%20seputar%20Wuling`}
+              href={`https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20tertarik%20dengan%20artikel%20"${encodeURIComponent(selectedArticle.title)}"%20dan%20ingin%20tanya-tanya%20seputar%20Wuling`}
               target="_blank"
               rel="noreferrer"
               className="btn-primary"
@@ -428,7 +428,7 @@ export default function ArticlesPage() {
   return (
     <div className="art-page">
 
-      {/* ── Hero ── */}
+      {/* â”€â”€ Hero â”€â”€ */}
       <div className="art-hero">
         <div className="art-hero-glow" />
         <div className="container art-hero-inner">
@@ -438,7 +438,7 @@ export default function ArticlesPage() {
           <h1 className="art-hero-title">Berita & Artikel<br />Seputar Wuling</h1>
           <p className="art-hero-sub">
             Tips berkendara, review kendaraan listrik Wuling, panduan kredit, dan informasi terbaru
-            seputar Wuling Indonesia — semuanya tersedia di sini.
+            seputar Wuling Indonesia â€” semuanya tersedia di sini.
           </p>
 
           {/* Search */}
@@ -455,7 +455,7 @@ export default function ArticlesPage() {
         </div>
       </div>
 
-      {/* ── Filter Bar ── */}
+      {/* â”€â”€ Filter Bar â”€â”€ */}
       <div className="art-filter-bar">
         <div className="container art-filter-inner">
           <div className="art-filter-tabs">
@@ -473,7 +473,7 @@ export default function ArticlesPage() {
         </div>
       </div>
 
-      {/* ── Articles Grid ── */}
+      {/* â”€â”€ Articles Grid â”€â”€ */}
       <div className="art-content">
         <div className="container">
           {filtered.length === 0 ? (
@@ -494,7 +494,7 @@ export default function ArticlesPage() {
               {/* Featured article (full-width, first item) */}
               {featured && <ArticleCard article={featured} featured onSelect={handleSelectArticle} />}
 
-              {/* Rest articles — 2-col grid */}
+              {/* Rest articles â€” 2-col grid */}
               {rest.length > 0 && (
                 <div className="art-grid">
                   {rest.map((a) => (
@@ -507,7 +507,7 @@ export default function ArticlesPage() {
         </div>
       </div>
 
-      {/* ── Bottom CTA ── */}
+      {/* â”€â”€ Bottom CTA â”€â”€ */}
       <div className="art-cta-section">
         <div className="container art-cta-inner">
           <div>
@@ -517,7 +517,7 @@ export default function ArticlesPage() {
             </p>
           </div>
           <a
-            href="https://wa.me/6288214786250?text=Halo%2C%20saya%20ingin%20konsultasi%20tentang%20Wuling"
+            href="https://wa.me/6288214786250?text=Halo%20Rafi%2C%20saya%20ingin%20konsultasi%20tentang%20Wuling"
             target="_blank"
             rel="noreferrer"
             className="btn-primary"
@@ -530,3 +530,4 @@ export default function ArticlesPage() {
     </div>
   );
 }
+
